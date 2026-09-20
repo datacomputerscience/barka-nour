@@ -1,5 +1,3 @@
-# Barka Nour - Cloudflare Pages SPA fallback
-# No infinite loop - use 404.html for SPA
-
-# API handled via functions if present
-/api/* /api/:splat 200
+# Barka Nour - Cloudflare Pages
+# SPA fallback handled by 404.html
+# No redirect rules to avoid infinite loop (previous fix for Barka SaaS)
