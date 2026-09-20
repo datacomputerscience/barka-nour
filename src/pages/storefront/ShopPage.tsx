@@ -59,8 +59,8 @@ export function ShopPage({ lang, onAddToCart }: Props) {
           </div>
 
           <div className="rounded-xl bg-bn-50 border border-bn-200 p-4">
-            <p className="font-semibold text-sm text-bn-900">Barka Nour - Sans images humaines</p>
-            <p className="text-xs text-bn-700/80 mt-1 leading-relaxed">Tous produits photographiés objet-only, fond neutre, sans modèles. Ex: "Sac sur table bois clair" pas "femme portant sac".</p>
+            <p className="font-semibold text-sm text-bn-900">Artisanat tunisien authentique</p>
+            <p className="text-xs text-bn-700/80 mt-1 leading-relaxed">Produits sélectionnés pour leur qualité, fabrication locale et matériaux durables. Livraison partout en Tunisie.</p>
           </div>
         </div>
 

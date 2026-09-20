@@ -25,7 +25,7 @@ export function HomePage({ lang, onAddToCart }: Props) {
             <div>
               <Badge variant="secondary" className="mb-4 bg-white border-bn-200 text-bn-800 gap-1.5">
                 <Sparkles className="h-3 w-3" />
-                {lang === 'ar' ? 'صناعة تونسية أصيلة • بدون صور بشرية' : lang === 'en' ? 'Authentic Tunisian craft • No human images' : 'Artisanat tunisien authentique • Sans images humaines'}
+                {lang === 'ar' ? 'صناعة تونسية أصيلة • جودة مضمونة' : lang === 'en' ? 'Authentic Tunisian craft • Premium quality' : 'Artisanat tunisien authentique • Qualité premium'}
               </Badge>
               <h1 className="font-display text-[36px] lg:text-[52px] font-bold leading-[0.9] tracking-tight text-ink-900">
                 {lang === 'ar' ? 'بركة نور' : 'Barka Nour'}<br />
@@ -150,7 +150,7 @@ export function HomePage({ lang, onAddToCart }: Props) {
         <div className="rounded-[2rem] bg-ink-900 text-white p-8 lg:p-12 grid md:grid-cols-3 gap-8">
           <div className="flex gap-4"><div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><Truck className="h-6 w-6" /></div><div><p className="font-semibold">Livraison partout en Tunisie</p><p className="text-sm text-ink-300 mt-1 leading-relaxed">24 gouvernorats, 24-72h, suivi SMS. Frais 7-10 TND, gratuit dès 150 TND.</p></div></div>
           <div className="flex gap-4"><div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><ShieldCheck className="h-6 w-6" /></div><div><p className="font-semibold">Paiement à la livraison</p><p className="text-sm text-ink-300 mt-1 leading-relaxed">Payez quand vous recevez. Pas de carte nécessaire. Confirmation par téléphone.</p></div></div>
-          <div className="flex gap-4"><div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><Package className="h-6 w-6" /></div><div><p className="font-semibold">Artisanat authentique</p><p className="text-sm text-ink-300 mt-1 leading-relaxed">Produits sélectionnés, sans images humaines, photos objet-only sur fond neutre.</p></div></div>
+          <div className="flex gap-4"><div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><Package className="h-6 w-6" /></div><div><p className="font-semibold">Artisanat authentique</p><p className="text-sm text-ink-300 mt-1 leading-relaxed">Produits sélectionnés pour leur qualité, fabrication locale et matériaux durables.</p></div></div>
         </div>
       </section>
     </div>

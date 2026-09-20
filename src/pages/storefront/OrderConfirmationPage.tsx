@@ -42,7 +42,7 @@ export function OrderConfirmationPage() {
             <h3 className="font-semibold text-sm mb-3">Que se passe-t-il maintenant?</h3>
             <div className="space-y-3 text-sm">
               <div className="flex gap-3"><div className="h-8 w-8 rounded-full bg-ink-900 text-white flex items-center justify-center flex-shrink-0"><Phone className="h-4 w-4" /></div><div><p className="font-medium">Appel de confirmation</p><p className="text-xs text-ink-600">Notre équipe vous appelle sous 2h pour confirmer adresse & créneau.</p></div></div>
-              <div className="flex gap-3"><div className="h-8 w-8 rounded-full bg-bn-100 text-bn-700 flex items-center justify-center flex-shrink-0"><Package className="h-4 w-4" /></div><div><p className="font-medium">Préparation colis objet-only</p><p className="text-xs text-ink-600">Vérification stock réel, emballage éco, étiquette livraison.</p></div></div>
+              <div className="flex gap-3"><div className="h-8 w-8 rounded-full bg-bn-100 text-bn-700 flex items-center justify-center flex-shrink-0"><Package className="h-4 w-4" /></div><div><p className="font-medium">Préparation colis</p><p className="text-xs text-ink-600">Vérification stock réel, emballage éco, étiquette livraison.</p></div></div>
               <div className="flex gap-3"><div className="h-8 w-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0"><Truck className="h-4 w-4" /></div><div><p className="font-medium">Expédition & tracking</p><p className="text-xs text-ink-600">SMS avec lien suivi. Paiement à la livraison en espèces.</p></div></div>
             </div>
           </CardContent>
@@ -53,7 +53,7 @@ export function OrderConfirmationPage() {
           <Link to="/" className="flex-1"><Button className="w-full h-11 rounded-full bg-ink-900 text-white">Accueil <ArrowRight className="h-4 w-4" /></Button></Link>
         </div>
 
-        <p className="text-[11px] text-center text-ink-500 leading-relaxed">Commande sécurisée: price snapshot serveur, idempotency, inventory decrement, shipment creation. Aucune image humaine utilisée. Support: contact@barkanour.tn</p>
+        <p className="text-[11px] text-center text-ink-500 leading-relaxed">Commande sécurisée. Support: contact@barkanour.tn</p>
       </div>
     </div>
   )
@@ -63,11 +63,11 @@ export function AboutPage() {
   return (
     <div className="mx-auto max-w-[960px] px-4 lg:px-6 py-12">
       <h1 className="text-[32px] font-bold tracking-tight font-display">À propos Barka Nour</h1>
-      <p className="text-ink-600 mt-3 leading-relaxed">Barka Nour est la boutique tunisienne unique, artisanat authentique, sans images humaines. Objet-only, confiance, technologie locale.</p>
+      <p className="text-ink-600 mt-3 leading-relaxed">Barka Nour est la boutique tunisienne unique, artisanat authentique, qualité premium et confiance.</p>
       <div className="mt-8 grid md:grid-cols-3 gap-4">
         <Card><CardContent className="p-5"><h3 className="font-semibold">Artisanat tunisien</h3><p className="text-sm text-ink-600 mt-2">Tapis berbère, bocaux verre, tote bio, huile argan, support bambou - 100% Tunisie.</p></CardContent></Card>
-        <Card><CardContent className="p-5"><h3 className="font-semibold">Sans humains</h3><p className="text-sm text-ink-600 mt-2">Politique stricte: produits, colis, boîtes, icônes, géométrique, architecture sans personnes.</p></CardContent></Card>
-        <Card><CardContent className="p-5"><h3 className="font-semibold">Tech locale</h3><p className="text-sm text-ink-600 mt-2">React+TS+Vite+Tailwind+Supabase+Cloudflare, COD, 24 gouvernorats, TND.</p></CardContent></Card>
+        <Card><CardContent className="p-5"><h3 className="font-semibold">Qualité & confiance</h3><p className="text-sm text-ink-600 mt-2">Produits sélectionnés, matériaux durables, fabrication locale et service client dédié.</p></CardContent></Card>
+        <Card><CardContent className="p-5"><h3 className="font-semibold">Livraison Tunisie</h3><p className="text-sm text-ink-600 mt-2">24 gouvernorats, paiement à la livraison, suivi SMS et retours faciles.</p></CardContent></Card>
       </div>
     </div>
   )

@@ -82,7 +82,7 @@ export function CheckoutPage({ lang, items, onOrderPlaced }: Props) {
   return (
     <div className="mx-auto max-w-[1280px] px-4 lg:px-6 py-8">
       <h1 className="text-[24px] font-bold tracking-tight">Commande • Paiement à la livraison</h1>
-      <p className="text-sm text-ink-600 mt-1">Livraison {shipping === 0 ? 'gratuite' : `${formatTND(shipping)}`} • Stock vérifié serveur-side</p>
+      <p className="text-sm text-ink-600 mt-1">Livraison {shipping === 0 ? 'gratuite' : `${formatTND(shipping)}`} • Confirmation par téléphone</p>
 
       <form onSubmit={handleSubmit} className="mt-8 grid lg:grid-cols-[1fr_380px] gap-8">
         <div className="space-y-6">
@@ -120,7 +120,7 @@ export function CheckoutPage({ lang, items, onOrderPlaced }: Props) {
                 <div className="flex-1"><p className="font-semibold text-sm">Paiement à la livraison (COD) • Recommandé Tunisie</p><p className="text-xs text-ink-600">Payez en espèces à réception • Vérification colis</p></div>
                 <Truck className="h-5 w-5 text-bn-700" />
               </label>
-              <p className="text-[11px] text-ink-500">Sécurité: totaux recalculés serveur-side, jamais trust client. Price snapshot, idempotency, inventory check.</p>
+              <p className="text-[11px] text-ink-500">Paiement sécurisé à la réception. Vérification du colis possible.</p>
             </CardContent>
           </Card>
         </div>
@@ -151,12 +151,12 @@ export function CheckoutPage({ lang, items, onOrderPlaced }: Props) {
               </Button>
 
               <div className="flex items-center justify-center gap-3 text-[11px] text-ink-500">
-                <span className="flex items-center gap-1"><ShieldCheck className="h-3 w-3" /> Serveur-side validation</span>
-                <span className="flex items-center gap-1"><Truck className="h-3 w-3" /> COD</span>
+                <span className="flex items-center gap-1"><ShieldCheck className="h-3 w-3" /> Paiement sécurisé</span>
+                <span className="flex items-center gap-1"><Truck className="h-3 w-3" /> Livraison 24-72h</span>
               </div>
 
               <div className="rounded-xl bg-ink-50 border p-3 text-[11px] text-ink-600 leading-relaxed">
-                <strong>15-step sécurité:</strong> validation champs, phone TN, gouvernorat 24, prix frais serveur, stock, subtotal recalc, coupon, livraison, total, idempotency, customer, snapshot, inventory, shipment, events.
+                En confirmant, vous acceptez nos conditions de vente. Livraison partout en Tunisie, retours sous 7 jours.
               </div>
             </CardContent>
           </Card>

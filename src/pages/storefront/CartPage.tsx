@@ -37,7 +37,7 @@ export function CartPage({ lang, items, onUpdateQty, onRemove }: Props) {
       <div className="mx-auto max-w-[720px] px-4 py-20 text-center">
         <div className="mx-auto h-20 w-20 rounded-[1.5rem] bg-ink-50 border flex items-center justify-center mb-6"><Package className="h-10 w-10 text-ink-300" /></div>
         <h1 className="text-[24px] font-bold">Votre panier est vide</h1>
-        <p className="text-ink-600 mt-2 text-sm max-w-[400px] mx-auto">Découvrez nos produits artisanaux tunisiens, 100% objet-only sans images humaines.</p>
+        <p className="text-ink-600 mt-2 text-sm max-w-[400px] mx-auto">Découvrez nos produits artisanaux tunisiens, qualité premium et fabrication locale.</p>
         <Link to="/shop"><Button className="mt-6 rounded-full bg-ink-900 text-white h-11 px-8">Continuer achats <ArrowRight className="h-4 w-4" /></Button></Link>
       </div>
     )
@@ -102,14 +102,14 @@ export function CartPage({ lang, items, onUpdateQty, onRemove }: Props) {
                 <span className="flex items-center gap-1"><Truck className="h-3.5 w-3.5" /> COD</span>
               </div>
 
-              <p className="text-[11px] text-ink-500 leading-relaxed">En commandant, vous acceptez nos conditions. Prix snapshot serveur-side • Aucun trust client totals (15-step validation).</p>
+              <p className="text-[11px] text-ink-500 leading-relaxed">En commandant, vous acceptez nos conditions de vente et de livraison.</p>
             </CardContent>
           </Card>
 
           <Card className="rounded-[1.25rem] bg-ink-900 text-white">
             <CardContent className="p-5">
               <p className="font-semibold text-sm">Barka Nour</p>
-              <p className="text-xs text-white/70 mt-1 leading-relaxed">Boutique tunisienne unique • Stock réel • Pas de survente • Livraison via MesColis/Aramex/First etc.</p>
+              <p className="text-xs text-white/70 mt-1 leading-relaxed">Boutique tunisienne • Qualité premium • Livraison 24-72h partout en Tunisie • Paiement à la livraison</p>
             </CardContent>
           </Card>
         </div>

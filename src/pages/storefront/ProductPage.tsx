@@ -46,7 +46,7 @@ export function ProductPage({ lang, onAddToCart }: Props) {
             ))}
           </div>
           <div className="rounded-xl bg-blue-50 border border-blue-200 p-3 text-xs text-blue-800">
-            <strong>Politique image Barka Nour:</strong> {product.description?.slice(0, 120)}... Photo objet-only, sans modèle humain, fond neutre.
+            <strong>Qualité Barka Nour:</strong> Produit authentique, matériaux durables, fabrication locale tunisienne.
           </div>
         </div>
 
