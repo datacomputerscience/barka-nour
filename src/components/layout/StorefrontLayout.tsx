@@ -26,8 +26,9 @@ export function StorefrontLayout({ children, cartCount, lang, setLang, onLangCha
   const nav = [
     { href: '/', label: lang === 'ar' ? 'الرئيسية' : lang === 'en' ? 'Home' : 'Accueil' },
     { href: '/shop', label: lang === 'ar' ? 'المتجر' : lang === 'en' ? 'Shop' : 'Boutique' },
-    { href: '/categories', label: lang === 'ar' ? 'الفئات' : lang === 'en' ? 'Categories' : 'Catégories' },
-    { href: '/offers', label: lang === 'ar' ? 'العروض' : lang === 'en' ? 'Offers' : 'Offres' },
+    { href: '/donner', label: lang === 'ar' ? 'تبرع' : lang === 'en' ? 'Donate' : 'Donner 🥝' },
+    { href: '/mon-espace', label: lang === 'ar' ? 'كيوي' : lang === 'en' ? 'My Kiwi' : 'Mon espace 🥝' },
+    { href: '/recompenses', label: lang === 'ar' ? 'المكافآت' : lang === 'en' ? 'Rewards' : 'Récompenses' },
   ]
 
   return (

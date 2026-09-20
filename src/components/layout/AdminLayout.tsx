@@ -4,7 +4,7 @@ import {
   LayoutDashboard, ShoppingBag, Package, Tags, Boxes, Users, 
   Megaphone, Ticket, LayoutTemplate, Truck, CreditCard, 
   BarChart3, Palette, Settings, HelpCircle, Menu, X, LogOut, 
-  Store, ShieldCheck, FileText, Bell
+  Store, ShieldCheck, FileText, Bell, Recycle, Gift, Coins
 } from 'lucide-react'
 import { BarkaNourLogo } from './BarkaNourLogo'
 import { Button } from '@/components/ui/button'
@@ -13,16 +13,20 @@ import { cn } from '@/lib/utils'
 const navigation = [
   { name: 'Dashboard', href: '/admin', icon: LayoutDashboard },
   { name: 'Commandes', href: '/admin/orders', icon: ShoppingBag, badge: '8' },
+  { name: 'Dons 🥝', href: '/admin/donations', icon: Recycle, highlight: true, badge: '2' },
+  { name: 'Kiwi Config', href: '/admin/kiwi', icon: Coins, highlight: true },
+  { name: 'Collecte', href: '/admin/collection', icon: Truck },
   { name: 'Produits', href: '/admin/products', icon: Package },
   { name: 'Catégories', href: '/admin/categories', icon: Tags },
   { name: 'Inventaire', href: '/admin/inventory', icon: Boxes },
   { name: 'Clients', href: '/admin/customers', icon: Users },
   { name: 'Coupons', href: '/admin/coupons', icon: Ticket },
+  { name: 'Récompenses', href: '/admin/rewards', icon: Gift },
   { name: 'Marketing', href: '/admin/marketing', icon: Megaphone },
   { name: 'Landing Pages', href: '/admin/landing-pages', icon: LayoutTemplate },
   { name: 'Livraison', href: '/admin/delivery', icon: Truck },
   { name: 'Paiements', href: '/admin/payments', icon: CreditCard },
-  { name: 'Meta', href: '/admin/meta', icon: Store, highlight: true },
+  { name: 'Meta', href: '/admin/meta', icon: Store },
   { name: 'Analytiques', href: '/admin/analytics', icon: BarChart3 },
   { name: 'Média', href: '/admin/media', icon: FileText },
   { name: 'Design', href: '/admin/design', icon: Palette },

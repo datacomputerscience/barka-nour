@@ -8,10 +8,15 @@ import { ProductPage } from '@/pages/storefront/ProductPage'
 import { CartPage } from '@/pages/storefront/CartPage'
 import { CheckoutPage } from '@/pages/storefront/CheckoutPage'
 import { OrderConfirmationPage, AboutPage, ContactPage } from '@/pages/storefront/OrderConfirmationPage'
+import { DonationPage } from '@/pages/storefront/DonationPage'
+import { KiwiDashboardPage } from '@/pages/storefront/KiwiDashboardPage'
+import { RewardsPage } from '@/pages/storefront/RewardsPage'
 import { DashboardPage } from '@/pages/admin/DashboardPage'
 import { ProductsPage, CategoriesPage, InventoryPage } from '@/pages/admin/ProductsPage'
 import { OrdersPage, CustomersPage, CouponsPage } from '@/pages/admin/OrdersPage'
 import { MetaPage, DeliveryPage, AnalyticsPage, SettingsPage } from '@/pages/admin/MetaPage'
+import { DonationsAdminPage } from '@/pages/admin/DonationsAdminPage'
+import { KiwiConfigPage, CollectionConfigPage } from '@/pages/admin/KiwiAdminPage'
 import { CartProvider, useCart } from '@/lib/cartContext'
 import { Language } from '@/i18n'
 
@@ -28,6 +33,12 @@ function StorefrontRoutes() {
         <Route path="/cart" element={<CartPage lang={lang} items={cart.items} onUpdateQty={cart.updateQty} onRemove={cart.removeItem} />} />
         <Route path="/checkout" element={<CheckoutPage lang={lang} items={cart.items} onOrderPlaced={() => cart.clear()} />} />
         <Route path="/order-confirmation" element={<OrderConfirmationPage />} />
+        <Route path="/donner" element={<DonationPage lang={lang} />} />
+        <Route path="/donner-mes-vetements" element={<DonationPage lang={lang} />} />
+        <Route path="/mon-espace" element={<KiwiDashboardPage />} />
+        <Route path="/mes-kiwi" element={<KiwiDashboardPage />} />
+        <Route path="/recompenses" element={<RewardsPage />} />
+        <Route path="/mes-recompenses" element={<RewardsPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<Navigate to="/" />} />
@@ -47,6 +58,9 @@ function AdminRoutes() {
         <Route path="/orders" element={<OrdersPage />} />
         <Route path="/customers" element={<CustomersPage />} />
         <Route path="/coupons" element={<CouponsPage />} />
+        <Route path="/donations" element={<DonationsAdminPage />} />
+        <Route path="/kiwi" element={<KiwiConfigPage />} />
+        <Route path="/collection" element={<CollectionConfigPage />} />
         <Route path="/delivery" element={<DeliveryPage />} />
         <Route path="/meta" element={<MetaPage />} />
         <Route path="/analytics" element={<AnalyticsPage />} />
