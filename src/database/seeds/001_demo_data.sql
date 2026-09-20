@@ -1,8 +1,8 @@
 -- Demo data Barka Nour - NO HUMAN IMAGES, object-only
--- 5 products artisanaux tunisiens
+-- 5 products artisanaux
 
 INSERT INTO store_settings (name, slug, description, email, currency) VALUES
-('Barka Nour', 'barka-nour', 'Boutique tunisienne unique - artisanat authentique, qualité premium', 'contact@barkanour.tn', 'TND')
+('Barka Nour', 'barka-nour', 'Boutique unique - artisanat authentique, qualité premium', 'contact@barkanour.tn', 'TND')
 ON CONFLICT (slug) DO NOTHING;
 
 INSERT INTO store_theme (primary_color, secondary_color, font_heading, font_body) VALUES
@@ -23,7 +23,7 @@ ON CONFLICT (slug) DO NOTHING;
 INSERT INTO products (name, slug, sku, short_description, description, price, compare_at_price, stock_quantity, low_stock_threshold, status, featured, images) VALUES
 ('Tapis Berbère Authentique - Laine Main', 'tapis-berbere-authentique-laine-main', 'BN-TAPIS-001',
  'Tapis tissé main, laine naturelle, motif berbère',
- 'Tapis berbère authentique tissé main par artisans tunisiens, laine naturelle beige et ocre, 200x150cm. Texture douce, finition artisanale, emballage rouleau kraft éco-responsable.',
+ 'Tapis berbère authentique tissé main par artisans, laine naturelle beige et ocre, 200x150cm. Texture douce, finition artisanale, emballage rouleau kraft éco-responsable.',
  299.000, 399.000, 3, 5, 'active', true, '["tapis-flatlay-neutral.jpg"]'::jsonb),
 
 ('Bocaux Verre Éco - Set 3 Stockage', 'bocaux-verre-eco-set-3-stockage', 'BN-BOCAUX-001',

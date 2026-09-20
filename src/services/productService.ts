@@ -24,7 +24,7 @@ const mockProducts: Product[] = [
     featured: true,
     images: [],
     seo_title: 'Tapis Berbère Laine Naturelle - Barka Nour',
-    seo_description: 'Tapis berbère tissé main, laine naturelle, 120x180, écru. Artisanat tunisien authentique.',
+    seo_description: 'Tapis berbère tissé main, laine naturelle, 120x180, écru..',
     created_at: new Date(Date.now() - 86400000 * 5).toISOString(),
     updated_at: new Date().toISOString(),
   },

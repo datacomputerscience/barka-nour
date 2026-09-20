@@ -117,7 +117,7 @@ export function CheckoutPage({ lang, items, onOrderPlaced }: Props) {
             <CardContent className="space-y-3">
               <label className="flex items-center gap-3 p-4 rounded-xl border-2 border-bn-600 bg-bn-50 cursor-pointer">
                 <input type="radio" checked={form.paymentMethod === 'cod'} onChange={() => setForm({...form, paymentMethod: 'cod'})} className="h-4 w-4" />
-                <div className="flex-1"><p className="font-semibold text-sm">Paiement à la livraison (COD) • Recommandé Tunisie</p><p className="text-xs text-ink-600">Payez en espèces à réception • Vérification colis</p></div>
+                <div className="flex-1"><p className="font-semibold text-sm">Paiement à la livraison (COD) • Recommandé</p><p className="text-xs text-ink-600">Payez en espèces à réception • Vérification colis</p></div>
                 <Truck className="h-5 w-5 text-bn-700" />
               </label>
               <p className="text-[11px] text-ink-500">Paiement sécurisé à la réception. Vérification du colis possible.</p>

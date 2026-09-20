@@ -101,7 +101,7 @@ export function StorefrontLayout({ children, cartCount, lang, setLang, onLangCha
               <p className="mt-4 text-sm text-ink-600 leading-relaxed">
                 {lang === 'ar' ? 'متجر بركة نور - منتجات تونسية أصيلة، حرفة وتقاليد. جودة، ثقة وتوصيل في جميع أنحاء تونس.' :
                  lang === 'en' ? 'Barka Nour store - authentic Tunisian products, craft and tradition. Quality, trust and delivery across Tunisia.' :
-                 'Boutique Barka Nour - produits tunisiens authentiques, artisanat et tradition. Qualité, confiance et livraison partout en Tunisie.'}
+                 'Boutique Barka Nour - produits authentiques, artisanat et tradition. Qualité, confiance et livraison partout en Tunisie.'}
               </p>
               <div className="mt-4 flex gap-2 text-xs text-ink-500">
                 <span className="flex items-center gap-1"><ShieldCheck className="h-3 w-3" /> COD</span>
@@ -126,13 +126,13 @@ export function StorefrontLayout({ children, cartCount, lang, setLang, onLangCha
             <div>
               <p className="font-semibold text-sm mb-3">Barka Nour</p>
               <div className="space-y-2 text-sm text-ink-600">
-                <p>À propos</p><p>Artisanat Tunisien</p><p>Blog</p><p>Admin</p>
+                <p>À propos</p><p>Artisanat</p><p>Blog</p><p>Admin</p>
               </div>
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-ink-100 flex flex-col md:flex-row justify-between gap-4 text-xs text-ink-400">
-            <p>© 2026 Barka Nour. Tous droits réservés. Marque originale tunisienne.</p>
-            <p className="flex items-center gap-2"><Package className="h-3 w-3" /> Tunis, Tunisie • Artisanat authentique</p>
+            <p>© 2026 Barka Nour. Tous droits réservés. Marque originale.</p>
+            <p className="flex items-center gap-2"><Package className="h-3 w-3" /> Tunis • Artisanat authentique</p>
           </div>
         </div>
       </footer>

@@ -37,7 +37,7 @@ export function CartPage({ lang, items, onUpdateQty, onRemove }: Props) {
       <div className="mx-auto max-w-[720px] px-4 py-20 text-center">
         <div className="mx-auto h-20 w-20 rounded-[1.5rem] bg-ink-50 border flex items-center justify-center mb-6"><Package className="h-10 w-10 text-ink-300" /></div>
         <h1 className="text-[24px] font-bold">Votre panier est vide</h1>
-        <p className="text-ink-600 mt-2 text-sm max-w-[400px] mx-auto">Découvrez nos produits artisanaux tunisiens, qualité premium et fabrication locale.</p>
+        <p className="text-ink-600 mt-2 text-sm max-w-[400px] mx-auto">Découvrez nos produits artisanaux, qualité premium et fabrication locale.</p>
         <Link to="/shop"><Button className="mt-6 rounded-full bg-olive-700 text-white h-11 px-8">Continuer achats <ArrowRight className="h-4 w-4" /></Button></Link>
       </div>
     )
@@ -109,7 +109,7 @@ export function CartPage({ lang, items, onUpdateQty, onRemove }: Props) {
           <Card className="rounded-[1.25rem] bg-olive-700 text-white">
             <CardContent className="p-5">
               <p className="font-semibold text-sm">Barka Nour</p>
-              <p className="text-xs text-white/70 mt-1 leading-relaxed">Boutique tunisienne • Qualité premium • Livraison 24-72h partout en Tunisie • Paiement à la livraison</p>
+              <p className="text-xs text-white/70 mt-1 leading-relaxed">Boutique • Qualité premium • Livraison 24-72h partout en Tunisie • Paiement à la livraison</p>
             </CardContent>
           </Card>
         </div>

@@ -20,7 +20,7 @@ export function BarkaNourLogo({ size = 'default', variant = 'full', className }:
       {variant === 'full' && (
         <div className="flex flex-col leading-none">
           <span className={cn("font-display font-bold tracking-tight text-ink-800", s.text)}>Barka Nour</span>
-          {size !== 'sm' && <span className={cn("font-medium tracking-widest text-olive-700 uppercase -mt-0.5", s.sub)}>بركة نور • Artisanat Tunisien</span>}
+          {size !== 'sm' && <span className={cn("font-medium tracking-widest text-olive-700 uppercase -mt-0.5", s.sub)}>بركة نور • Qualité Premium</span>}
         </div>
       )}
     </div>

@@ -30,7 +30,7 @@ export function HomePage({ lang, onAddToCart }: Props) {
               </div>
 
               <h1 className="mt-5 font-display text-[34px] lg:text-[48px] font-bold leading-[0.95] tracking-tight text-ink-800">
-                {lang === 'ar' ? 'منتجات تونسية أصيلة،' : lang === 'en' ? 'Authentic Tunisian' : 'Des produits tunisiens'}
+                {lang === 'ar' ? 'منتجات أصيلة،' : lang === 'en' ? 'Authentic' : 'Des produits sélectionnés'}
                 <br />
                 <span className="text-olive-700">{lang === 'ar' ? 'توصلك لباب دارك' : lang === 'en' ? 'delivered to your door' : 'livrés chez vous'}</span>
               </h1>
@@ -139,7 +139,7 @@ export function HomePage({ lang, onAddToCart }: Props) {
       {/* Categories - Clear */}
       <section className="mx-auto max-w-[1280px] px-4 lg:px-6 py-6">
         <div className="flex items-end justify-between mb-5">
-          <div><h2 className="text-[22px] font-bold tracking-tight text-ink-800">Catégories</h2><p className="text-sm text-ink-600 mt-1">Tout l'artisanat tunisien en 4 univers</p></div>
+          <div><h2 className="text-[22px] font-bold tracking-tight text-ink-800">Catégories</h2><p className="text-sm text-ink-600 mt-1">Tout l.artisanat en 4 univers</p></div>
           <Link to="/shop" className="text-sm font-medium text-olive-700 hover:text-olive-800 flex items-center gap-1">Voir tout <ArrowRight className="h-4 w-4" /></Link>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -193,7 +193,7 @@ export function HomePage({ lang, onAddToCart }: Props) {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="flex gap-3"><div className="h-10 w-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><Truck className="h-5 w-5" /></div><div><p className="font-semibold text-[15px]">Livraison partout</p><p className="text-sm text-white/70 mt-1 leading-relaxed">24 gouvernorats • 24-72h • 7-10 TND • Gratuit dès 150 TND • Suivi SMS</p></div></div>
             <div className="flex gap-3"><div className="h-10 w-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><ShieldCheck className="h-5 w-5" /></div><div><p className="font-semibold text-[15px]">Paiement à la livraison</p><p className="text-sm text-white/70 mt-1 leading-relaxed">Pas de carte • Payez en espèces à réception • Vérification colis</p></div></div>
-            <div className="flex gap-3"><div className="h-10 w-10 rounded-xl bg-bn-400/20 flex items-center justify-center shrink-0"><Package className="h-5 w-5 text-bn-300" /></div><div><p className="font-semibold text-[15px]">Qualité garantie</p><p className="text-sm text-white/70 mt-1 leading-relaxed">Artisanat tunisien • Matériaux durables • Support réactif • Fabrication locale</p></div></div>
+            <div className="flex gap-3"><div className="h-10 w-10 rounded-xl bg-bn-400/20 flex items-center justify-center shrink-0"><Package className="h-5 w-5 text-bn-300" /></div><div><p className="font-semibold text-[15px]">Qualité garantie</p><p className="text-sm text-white/70 mt-1 leading-relaxed">Artisanat • Matériaux durables • Support réactif • Fabrication locale</p></div></div>
           </div>
         </div>
       </section>

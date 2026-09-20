@@ -59,14 +59,14 @@ export function ShopPage({ lang, onAddToCart }: Props) {
           </div>
 
           <div className="rounded-xl bg-bn-50 border border-bn-200 p-4">
-            <p className="font-semibold text-sm text-bn-900">Artisanat tunisien authentique</p>
+            <p className="font-semibold text-sm text-bn-900">Artisanat authentique</p>
             <p className="text-xs text-bn-700/80 mt-1 leading-relaxed">Produits sélectionnés pour leur qualité, fabrication locale et matériaux durables. Livraison partout en Tunisie.</p>
           </div>
         </div>
 
         <div className="flex-1">
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between mb-6">
-            <div><h1 className="text-[24px] font-bold tracking-tight font-display">Boutique</h1><p className="text-sm text-ink-600">{filtered.length} produits • Artisanat tunisien authentique</p></div>
+            <div><h1 className="text-[24px] font-bold tracking-tight font-display">Boutique</h1><p className="text-sm text-ink-600">{filtered.length} produits • Artisanat authentique</p></div>
             <div className="flex gap-2 w-full sm:w-auto">
               <div className="relative flex-1 sm:w-[240px]"><Search className="absolute left-3 top-2.5 h-4 w-4 text-ink-400" /><Input placeholder="Rechercher..." className="pl-9 h-9" value={search} onChange={e => setSearch(e.target.value)} /></div>
               <Select value={sort} onChange={e => setSort(e.target.value)} className="h-9 w-[160px]"><option value="featured">Vedette</option><option value="newest">Nouveautés</option><option value="price-asc">Prix croissant</option><option value="price-desc">Prix décroissant</option></Select>
