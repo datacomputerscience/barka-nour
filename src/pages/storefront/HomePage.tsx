@@ -2,9 +2,10 @@ import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import { Input } from '@/components/ui/input'
 import { formatTND } from '@/lib/utils'
 import { mockProducts } from '@/services/productService'
-import { Package, Truck, ShieldCheck, Star, ArrowRight, Sparkles, MapPin, Heart } from 'lucide-react'
+import { Package, Truck, ShieldCheck, Star, ArrowRight, Sparkles, MapPin, Search, Check, Heart, Clock } from 'lucide-react'
 import { Language } from '@/i18n'
 
 interface Props {
@@ -16,128 +17,169 @@ export function HomePage({ lang, onAddToCart }: Props) {
   const featured = mockProducts.filter(p => p.featured).slice(0, 6)
 
   return (
-    <div className="min-h-screen">
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-[#fdfcf8]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(202,138,4,0.08),transparent_50%),radial-gradient(circle_at_80%_70%,rgba(202,138,4,0.05),transparent_50%)]" />
-        <div className="relative mx-auto max-w-[1280px] px-4 lg:px-6 py-12 lg:py-20">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
+    <div className="min-h-screen bg-[#f7f6f2]">
+      {/* Hero - Clearer */}
+      <section className="relative overflow-hidden bg-white border-b border-ink-100">
+        <div className="mx-auto max-w-[1280px] px-4 lg:px-6 py-10 lg:py-16">
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center">
+            {/* Left - Content */}
             <div>
-              <Badge variant="secondary" className="mb-4 bg-white border-bn-200 text-olive-700 gap-1.5">
-                <Sparkles className="h-3 w-3" />
-                {lang === 'ar' ? 'صناعة تونسية أصيلة • جودة مضمونة' : lang === 'en' ? 'Authentic Tunisian craft • Premium quality' : 'Artisanat tunisien authentique • Qualité premium'}
-              </Badge>
-              <h1 className="font-display text-[36px] lg:text-[52px] font-bold leading-[0.9] tracking-tight text-ink-900">
-                {lang === 'ar' ? 'بركة نور' : 'Barka Nour'}<br />
-                <span className="text-olive-700">{lang === 'ar' ? 'جوهر الحرف' : lang === 'en' ? 'Essence of Craft' : 'L\'essence de l\'artisanat'}</span>
-              </h1>
-              <p className="mt-5 text-[17px] leading-relaxed text-ink-600 max-w-[480px]">
-                {lang === 'ar' ? 'منتجات تونسية أصيلة مختارة بعناية. كل منتج يحكي قصة حرفي. توصيل في جميع أنحاء تونس، الدفع عند الاستلام.' :
-                 lang === 'en' ? 'Authentic Tunisian products, carefully selected. Each product tells a craftsman story. Delivery across Tunisia, cash on delivery.' :
-                 'Des produits tunisiens authentiques, sélectionnés avec soin. Chaque produit raconte l\'histoire d\'un artisan. Livraison partout en Tunisie, paiement à la livraison.'}
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Link to="/shop"><Button size="lg" className="h-12 px-7 bg-olive-700 hover:bg-olive-800 text-white rounded-full">{lang === 'ar' ? 'اكتشف المجموعة' : lang === 'en' ? 'Discover collection' : 'Découvrir la collection'} <ArrowRight className="h-5 w-5" /></Button></Link>
-                <Link to="/about"><Button variant="outline" size="lg" className="h-12 px-7 rounded-full bg-white">{lang === 'ar' ? 'قصتنا' : lang === 'en' ? 'Our story' : 'Notre histoire'}</Button></Link>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-bn-50 border border-bn-200 text-xs font-medium text-olive-700">
+                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                {lang === 'ar' ? 'توصيل خلال 24-72 ساعة • 24 ولاية' : lang === 'en' ? 'Delivery in 24-72h • 24 governorates' : 'Livraison en 24-72h • 24 gouvernorats'}
               </div>
-              <div className="mt-8 flex items-center gap-6 text-sm">
-                <div className="flex items-center gap-2">
-                  <div className="flex -space-x-2">{[1,2,3].map(i => <div key={i} className="h-8 w-8 rounded-full border-2 border-white bg-olive-100 flex items-center justify-center text-[10px]">★</div>)}</div>
-                  <span className="text-ink-600"><strong className="text-ink-900">+500</strong> {lang === 'ar' ? 'عميل راض' : lang === 'en' ? 'happy customers' : 'clients satisfaits'}</span>
+
+              <h1 className="mt-5 font-display text-[34px] lg:text-[48px] font-bold leading-[0.95] tracking-tight text-ink-800">
+                {lang === 'ar' ? 'منتجات تونسية أصيلة،' : lang === 'en' ? 'Authentic Tunisian' : 'Des produits tunisiens'}
+                <br />
+                <span className="text-olive-700">{lang === 'ar' ? 'توصلك لباب دارك' : lang === 'en' ? 'delivered to your door' : 'livrés chez vous'}</span>
+              </h1>
+
+              <p className="mt-4 text-[16px] lg:text-[18px] leading-relaxed text-ink-600 max-w-[520px]">
+                {lang === 'ar' ? 'تابل، فخار، سلات، زيوت طبيعية - جودة مضمونة، دفع عند الاستلام، توصيل لكل تونس.' :
+                 lang === 'en' ? 'Berber rugs, pottery, natural oils — premium quality, cash on delivery, delivery across Tunisia.' :
+                 'Tapis berbères, poteries, huiles naturelles — qualité premium, paiement à la livraison, partout en Tunisie.'}
+              </p>
+
+              {/* Search - Clear */}
+              <div className="mt-7 max-w-[520px]">
+                <div className="flex gap-2 p-1.5 rounded-full bg-white border border-ink-200 shadow-sm">
+                  <div className="relative flex-1">
+                    <Search className="absolute left-4 top-3 h-5 w-5 text-ink-400" />
+                    <Input placeholder={lang === 'ar' ? 'ماذا تبحث؟ tapis, bocaux, tote...' : lang === 'en' ? 'What are you looking for? rug, jars, tote...' : 'Que cherchez-vous ? tapis, bocaux, tote...'} className="pl-11 h-11 rounded-full border-0 bg-transparent focus:ring-0 text-[15px]" />
+                  </div>
+                  <Link to="/shop"><Button className="h-11 px-6 rounded-full bg-olive-700 hover:bg-olive-800 text-white"><Search className="h-4 w-4" /> {lang === 'ar' ? 'بحث' : lang === 'en' ? 'Search' : 'Rechercher'}</Button></Link>
                 </div>
-                <div className="h-4 w-px bg-ink-200" />
-                <div className="flex items-center gap-1.5"><Star className="h-4 w-4 fill-amber-400 text-amber-400" /><strong className="text-ink-900">4.9/5</strong></div>
+                <div className="mt-3 flex flex-wrap gap-2 text-xs">
+                  <span className="text-ink-500">{lang === 'ar' ? 'الأكثر بحثاً:' : lang === 'en' ? 'Popular:' : 'Populaires:'}</span>
+                  {['Tapis berbère', 'Bocaux verre', 'Tote bio', 'Huile argan'].map(t => (
+                    <Link key={t} to={`/shop?q=${t}`} className="px-2.5 py-1 rounded-full bg-white border border-ink-200 hover:border-olive-300 hover:text-olive-700 transition-colors">{t}</Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Trust row */}
+              <div className="mt-8 grid grid-cols-3 gap-4 max-w-[520px]">
+                <div className="flex items-center gap-2 text-sm"><div className="h-8 w-8 rounded-full bg-emerald-50 flex items-center justify-center"><Check className="h-4 w-4 text-emerald-600" /></div><span className="font-medium text-ink-700">Paiement<br /><span className="text-ink-500 font-normal text-xs">à la livraison</span></span></div>
+                <div className="flex items-center gap-2 text-sm"><div className="h-8 w-8 rounded-full bg-bn-50 flex items-center justify-center"><Truck className="h-4 w-4 text-bn-600" /></div><span className="font-medium text-ink-700">Livraison<br /><span className="text-ink-500 font-normal text-xs">24-72h • 7-10 TND</span></span></div>
+                <div className="flex items-center gap-2 text-sm"><div className="h-8 w-8 rounded-full bg-olive-50 flex items-center justify-center"><ShieldCheck className="h-4 w-4 text-olive-700" /></div><span className="font-medium text-ink-700">Retour<br /><span className="text-ink-500 font-normal text-xs">7 jours</span></span></div>
               </div>
             </div>
 
-            <div className="relative lg:h-[520px]">
-              <div className="relative mx-auto max-w-[440px] lg:absolute lg:inset-0">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-4">
-                    <div className="aspect-[3/4] rounded-[1.5rem] bg-white border border-olive-100 shadow-sm flex flex-col p-4">
-                      <div className="flex-1 rounded-xl bg-olive-50 flex items-center justify-center"><Package className="h-10 w-10 text-olive-800/40" /></div>
-                      <div className="mt-3"><p className="text-sm font-bold">Tapis Berbère</p><p className="text-xs text-ink-500">Tissé main • Kairouan</p><p className="text-sm font-bold mt-1">299,000 TND</p></div>
+            {/* Right - Clear product showcase */}
+            <div className="relative">
+              <div className="rounded-[2rem] bg-[#f7f6f2] border border-ink-200 p-4 lg:p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <p className="font-semibold text-ink-800">{lang === 'ar' ? 'منتجات مختارة' : lang === 'en' ? 'Selected for you' : 'Sélection du jour'}</p>
+                  <Badge className="bg-bn-400 text-ink-800 border-bn-300">-25% • Livraison gratuite dès 150 TND</Badge>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  <Card className="overflow-hidden border-ink-200 hover:shadow-md transition-shadow">
+                    <div className="aspect-square bg-white flex items-center justify-center relative">
+                      <Package className="h-12 w-12 text-olive-200" />
+                      <Badge className="absolute top-2 left-2 bg-olive-700 text-white text-[10px]">Best-seller</Badge>
                     </div>
-                    <div className="aspect-square rounded-[1.5rem] bg-olive-700 text-white p-5 flex flex-col justify-between">
-                      <p className="text-xs opacity-70">Offre spéciale</p>
-                      <div><p className="text-[28px] font-bold leading-none">-25%</p><p className="text-xs opacity-70 mt-1">Sur collection maison</p></div>
-                    </div>
-                  </div>
-                  <div className="space-y-4 pt-8">
-                    <div className="aspect-square rounded-[1.5rem] bg-bn-50 border border-bn-100 p-4 flex flex-col justify-between">
-                      <div className="h-12 w-12 rounded-xl bg-white border flex items-center justify-center"><Truck className="h-6 w-6 text-olive-700" /></div>
-                      <div><p className="text-sm font-bold">Livraison offerte</p><p className="text-xs text-ink-500">Dès 150 TND</p></div>
-                    </div>
-                    <div className="aspect-[3/4] rounded-[1.5rem] bg-white border shadow-sm flex flex-col p-4">
-                      <div className="flex-1 rounded-xl bg-[#fefce8] flex items-center justify-center"><Package className="h-10 w-10 text-olive-700/30" /></div>
-                      <div className="mt-3"><p className="text-sm font-bold">Sac Tote Bio</p><p className="text-xs text-ink-500">Coton bio • Naturel</p><p className="text-sm font-bold mt-1">45,000 TND</p></div>
-                    </div>
+                    <CardContent className="p-3">
+                      <p className="font-medium text-sm leading-tight">Tapis Berbère • Laine main</p>
+                      <p className="text-xs text-ink-500">Kairouan • 200x150cm</p>
+                      <div className="mt-2 flex items-center justify-between"><span className="font-bold">{formatTND(299)}</span><span className="text-xs line-through text-ink-400">{formatTND(399)}</span></div>
+                    </CardContent>
+                  </Card>
+
+                  <div className="space-y-3">
+                    <Card className="p-4 bg-olive-700 text-white border-0">
+                      <p className="text-xs opacity-80">Stock limité</p>
+                      <p className="text-[22px] font-bold leading-none mt-1">3 restants</p>
+                      <p className="text-xs opacity-70 mt-1">Tapis Berbère • Beige</p>
+                    </Card>
+                    <Card className="overflow-hidden border-ink-200">
+                      <div className="aspect-[4/3] bg-white flex items-center justify-center"><Package className="h-8 w-8 text-bn-300" /></div>
+                      <CardContent className="p-2.5">
+                        <p className="font-medium text-xs">Bocaux verre • Set 3</p>
+                        <p className="font-bold text-sm mt-1">{formatTND(59)}</p>
+                      </CardContent>
+                    </Card>
                   </div>
                 </div>
-                <div className="absolute top-[10%] -right-4 rounded-2xl bg-white border shadow-xl p-3 flex items-center gap-3 animate-float">
-                  <div className="h-10 w-10 rounded-xl bg-emerald-50 flex items-center justify-center"><ShieldCheck className="h-5 w-5 text-emerald-600" /></div>
-                  <div><p className="text-xs font-bold">Paiement sécurisé</p><p className="text-[11px] text-ink-500">COD • Sans carte</p></div>
-                </div>
-                <div className="absolute bottom-[15%] -left-4 rounded-2xl bg-white border shadow-xl p-3 flex items-center gap-3 animate-float" style={{ animationDelay: '1s' }}>
-                  <div className="h-10 w-10 rounded-xl bg-bn-50 flex items-center justify-center"><MapPin className="h-5 w-5 text-olive-700" /></div>
-                  <div><p className="text-xs font-bold">24 Gouvernorats</p><p className="text-[11px] text-ink-500">Livraison 24-72h</p></div>
+
+                <div className="mt-4 flex items-center justify-between p-3 rounded-xl bg-white border border-ink-200">
+                  <div className="flex items-center gap-2">
+                    <div className="h-8 w-8 rounded-full bg-emerald-50 flex items-center justify-center"><Clock className="h-4 w-4 text-emerald-600" /></div>
+                    <div><p className="text-xs font-bold">Commande avant 14h</p><p className="text-[11px] text-ink-500">Expédiée aujourd'hui</p></div>
+                  </div>
+                  <div className="flex items-center gap-1 text-xs"><Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" /><span className="font-bold">4.9</span><span className="text-ink-500">(500+ avis)</span></div>
                 </div>
               </div>
+
+              {/* Floating badges */}
+              <div className="absolute -top-3 -right-3 hidden lg:flex items-center gap-2 px-3 py-2 rounded-full bg-white border shadow-lg text-xs font-medium"><div className="h-6 w-6 rounded-full bg-bn-400 flex items-center justify-center">🇹🇳</div> 24 gouvernorats</div>
+              <div className="absolute -bottom-3 -left-3 hidden lg:flex items-center gap-2 px-3 py-2 rounded-full bg-white border shadow-lg text-xs font-medium"><ShieldCheck className="h-4 w-4 text-emerald-600" /> Paiement COD</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Categories */}
-      <section className="mx-auto max-w-[1280px] px-4 lg:px-6 py-12">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-[22px] font-bold tracking-tight font-display">{lang === 'ar' ? 'الفئات' : lang === 'en' ? 'Categories' : 'Catégories'}</h2>
-          <Link to="/categories"><Button variant="ghost" size="sm">{lang === 'ar' ? 'عرض الكل' : lang === 'en' ? 'View all' : 'Voir tout'} <ArrowRight className="h-4 w-4" /></Button></Link>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {/* How it works - Clear 3 steps */}
+      <section className="mx-auto max-w-[1280px] px-4 lg:px-6 py-10">
+        <div className="grid md:grid-cols-3 gap-4">
           {[
-            { name: lang === 'ar' ? 'المنسوجات' : lang === 'en' ? 'Textiles' : 'Textiles', count: 12, color: 'bg-amber-50 border-amber-100' },
-            { name: lang === 'ar' ? 'المطبخ' : lang === 'en' ? 'Kitchen' : 'Cuisine', count: 18, color: 'bg-olive-100 border-olive-200' },
-            { name: lang === 'ar' ? 'الجمال' : lang === 'en' ? 'Beauty' : 'Beauté', count: 10, color: 'bg-rose-50 border-rose-100' },
-            { name: lang === 'ar' ? 'الإكسسوارات' : lang === 'en' ? 'Accessories' : 'Accessoires', count: 16, color: 'bg-blue-50 border-blue-100' },
-          ].map(c => (
-            <Card key={c.name} className={`${c.color} hover:shadow-md transition-all cursor-pointer group`}>
-              <CardContent className="p-5">
-                <div className="h-12 w-12 rounded-xl bg-white border flex items-center justify-center mb-3 group-hover:scale-105 transition-transform"><Package className="h-6 w-6 text-ink-400" /></div>
-                <p className="font-semibold">{c.name}</p>
-                <p className="text-xs text-ink-500 mt-1">{c.count} {lang === 'ar' ? 'منتج' : lang === 'en' ? 'products' : 'produits'}</p>
-              </CardContent>
-            </Card>
+            { step: '01', title: 'Choisissez', desc: 'Parcourez nos produits artisanaux, photos claires sur fond neutre.', icon: Search },
+            { step: '02', title: 'Commandez', desc: 'Nom, téléphone, gouvernorat, adresse. Pas besoin de carte.', icon: Package },
+            { step: '03', title: 'Recevez', desc: 'Livraison 24-72h, SMS suivi, paiement à la réception.', icon: Truck },
+          ].map(s => (
+            <div key={s.step} className="flex gap-4 p-5 rounded-2xl bg-white border border-ink-200">
+              <div className="h-10 w-10 rounded-xl bg-olive-50 border border-olive-100 flex items-center justify-center font-bold text-olive-700">{s.step}</div>
+              <div><p className="font-semibold text-ink-800 flex items-center gap-2"><s.icon className="h-4 w-4 text-ink-400" /> {s.title}</p><p className="text-sm text-ink-600 mt-1 leading-relaxed">{s.desc}</p></div>
+            </div>
           ))}
         </div>
       </section>
 
-      {/* Featured Products */}
-      <section className="mx-auto max-w-[1280px] px-4 lg:px-6 py-8">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-[22px] font-bold tracking-tight font-display">{lang === 'ar' ? 'منتجات مميزة' : lang === 'en' ? 'Featured products' : 'Produits vedettes'}</h2>
-          <Link to="/shop"><Button variant="outline" size="sm" className="rounded-full">{lang === 'ar' ? 'عرض المتجر' : lang === 'en' ? 'View shop' : 'Voir boutique'}</Button></Link>
+      {/* Categories - Clear */}
+      <section className="mx-auto max-w-[1280px] px-4 lg:px-6 py-6">
+        <div className="flex items-end justify-between mb-5">
+          <div><h2 className="text-[22px] font-bold tracking-tight text-ink-800">Catégories</h2><p className="text-sm text-ink-600 mt-1">Tout l'artisanat tunisien en 4 univers</p></div>
+          <Link to="/shop" className="text-sm font-medium text-olive-700 hover:text-olive-800 flex items-center gap-1">Voir tout <ArrowRight className="h-4 w-4" /></Link>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {[
+            { name: 'Textiles', sub: 'Tapis • Coussins', count: '12 produits', color: 'bg-[#fff7e2] border-bn-200', icon: '🧶' },
+            { name: 'Cuisine', sub: 'Bocaux • Rangement', count: '18 produits', color: 'bg-olive-50 border-olive-100', icon: '🫙' },
+            { name: 'Accessoires', sub: 'Tote • Sacs bio', count: '16 produits', color: 'bg-white border-ink-200', icon: '👜' },
+            { name: 'Beauté', sub: 'Huiles • Naturel', count: '10 produits', color: 'bg-[#f0f5f3] border-olive-100', icon: '🌿' },
+          ].map(c => (
+            <Link key={c.name} to={`/shop?cat=${c.name}`} className={`group p-5 rounded-2xl border ${c.color} hover:shadow-md transition-all`}>
+              <div className="flex items-start justify-between"><span className="text-[22px]">{c.icon}</span><span className="text-[11px] px-2 py-1 rounded-full bg-white border text-ink-600">{c.count}</span></div>
+              <p className="font-semibold mt-3 text-ink-800 group-hover:text-olive-700">{c.name}</p>
+              <p className="text-xs text-ink-500">{c.sub}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Featured - Clear */}
+      <section className="mx-auto max-w-[1280px] px-4 lg:px-6 py-8">
+        <div className="flex items-end justify-between mb-5">
+          <div><h2 className="text-[22px] font-bold tracking-tight text-ink-800">Produits vedettes</h2><p className="text-sm text-ink-600 mt-1">Sélection premium • Stock réel • Livraison 24-72h</p></div>
+          <Link to="/shop"><Button variant="outline" size="sm" className="rounded-full bg-white">Voir boutique <ArrowRight className="h-4 w-4" /></Button></Link>
+        </div>
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
           {featured.map(product => (
-            <Card key={product.id} className="group overflow-hidden hover:shadow-lg transition-all border-ink-100">
+            <Card key={product.id} className="group overflow-hidden border-ink-200 bg-white hover:shadow-lg transition-all">
               <Link to={`/products/${product.slug}`}>
-                <div className="aspect-[4/3] bg-[#fdfcf8] relative overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center"><Package className="h-12 w-12 text-olive-200 group-hover:scale-110 transition-transform" /></div>
-                  {product.compare_at_price && <Badge className="absolute top-3 left-3 bg-olive-700 text-white">-{Math.round((1-product.price/product.compare_at_price)*100)}%</Badge>}
-                  {product.featured && <Badge className="absolute top-3 right-3 bg-bn-400 text-ink-800"><Star className="h-3 w-3" /> Vedette</Badge>}
+                <div className="aspect-[4/3] bg-[#fdfcf8] relative">
+                  <div className="absolute inset-0 flex items-center justify-center"><Package className="h-10 w-10 text-olive-200 group-hover:scale-110 transition-transform" /></div>
+                  {product.compare_at_price && <Badge className="absolute top-2.5 left-2.5 bg-olive-700 text-white text-[11px]">-{Math.round((1-product.price/product.compare_at_price)*100)}%</Badge>}
+                  <Badge className="absolute top-2.5 right-2.5 bg-bn-400 text-ink-800 border-bn-300 text-[10px]"><Star className="h-3 w-3" /> 4.9</Badge>
                 </div>
               </Link>
-              <CardContent className="p-4">
-                <p className="text-xs text-ink-500">{product.sku}</p>
-                <Link to={`/products/${product.slug}`}><h3 className="font-medium text-ink-900 mt-1 leading-tight line-clamp-2 text-sm hover:text-bn-700">{product.name}</h3></Link>
-                <div className="mt-3 flex items-center justify-between">
-                  <div className="flex items-baseline gap-2"><span className="font-bold">{formatTND(product.price)}</span>{product.compare_at_price && <span className="text-xs text-ink-400 line-through">{formatTND(product.compare_at_price)}</span>}</div>
-                  <span className={`text-xs px-2 py-1 rounded-full ${product.stock_quantity > 5 ? 'bg-emerald-50 text-emerald-700' : product.stock_quantity > 0 ? 'bg-amber-50 text-amber-700' : 'bg-red-50 text-red-700'}`}>{product.stock_quantity > 0 ? `${product.stock_quantity} en stock` : 'Rupture'}</span>
-                </div>
-                <div className="mt-3 flex gap-2">
-                  <Button onClick={() => onAddToCart(product.id)} disabled={product.stock_quantity === 0} className="flex-1 rounded-full bg-olive-700 hover:bg-olive-800 text-white h-9 text-sm"><Package className="h-4 w-4" /> {lang === 'ar' ? 'أضف' : lang === 'en' ? 'Add' : 'Ajouter'}</Button>
-                  <Button variant="outline" size="icon" className="h-9 w-9 rounded-full"><Heart className="h-4 w-4" /></Button>
+              <CardContent className="p-3.5">
+                <p className="text-[11px] font-mono text-ink-500">{product.sku} • {product.stock_quantity} en stock</p>
+                <Link to={`/products/${product.slug}`}><h3 className="font-medium text-sm leading-tight mt-1 line-clamp-2 hover:text-olive-700">{product.name}</h3></Link>
+                <div className="mt-2.5 flex items-center justify-between">
+                  <div><span className="font-bold text-[15px]">{formatTND(product.price)}</span>{product.compare_at_price && <span className="ml-2 text-xs line-through text-ink-400">{formatTND(product.compare_at_price)}</span>}</div>
+                  <Button onClick={() => onAddToCart(product.id)} size="sm" className="h-8 rounded-full bg-olive-700 hover:bg-olive-800 text-white text-xs px-3">Ajouter</Button>
                 </div>
               </CardContent>
             </Card>
@@ -145,12 +187,14 @@ export function HomePage({ lang, onAddToCart }: Props) {
         </div>
       </section>
 
-      {/* Trust */}
-      <section className="mx-auto max-w-[1280px] px-4 lg:px-6 py-12">
-        <div className="rounded-[2rem] bg-olive-700 text-white p-8 lg:p-12 grid md:grid-cols-3 gap-8">
-          <div className="flex gap-4"><div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><Truck className="h-6 w-6" /></div><div><p className="font-semibold">Livraison partout en Tunisie</p><p className="text-sm text-ink-300 mt-1 leading-relaxed">24 gouvernorats, 24-72h, suivi SMS. Frais 7-10 TND, gratuit dès 150 TND.</p></div></div>
-          <div className="flex gap-4"><div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><ShieldCheck className="h-6 w-6" /></div><div><p className="font-semibold">Paiement à la livraison</p><p className="text-sm text-ink-300 mt-1 leading-relaxed">Payez quand vous recevez. Pas de carte nécessaire. Confirmation par téléphone.</p></div></div>
-          <div className="flex gap-4"><div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><Package className="h-6 w-6" /></div><div><p className="font-semibold">Artisanat authentique</p><p className="text-sm text-ink-300 mt-1 leading-relaxed">Produits sélectionnés pour leur qualité, fabrication locale et matériaux durables.</p></div></div>
+      {/* Trust - Clear */}
+      <section className="mx-auto max-w-[1280px] px-4 lg:px-6 py-10">
+        <div className="rounded-[1.5rem] bg-olive-700 text-white p-6 lg:p-8">
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="flex gap-3"><div className="h-10 w-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><Truck className="h-5 w-5" /></div><div><p className="font-semibold text-[15px]">Livraison partout</p><p className="text-sm text-white/70 mt-1 leading-relaxed">24 gouvernorats • 24-72h • 7-10 TND • Gratuit dès 150 TND • Suivi SMS</p></div></div>
+            <div className="flex gap-3"><div className="h-10 w-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><ShieldCheck className="h-5 w-5" /></div><div><p className="font-semibold text-[15px]">Paiement à la livraison</p><p className="text-sm text-white/70 mt-1 leading-relaxed">Pas de carte • Payez en espèces à réception • Vérification colis</p></div></div>
+            <div className="flex gap-3"><div className="h-10 w-10 rounded-xl bg-bn-400/20 flex items-center justify-center shrink-0"><Package className="h-5 w-5 text-bn-300" /></div><div><p className="font-semibold text-[15px]">Qualité garantie</p><p className="text-sm text-white/70 mt-1 leading-relaxed">Artisanat tunisien • Matériaux durables • Retour 7 jours • Support réactif</p></div></div>
+          </div>
         </div>
       </section>
     </div>
