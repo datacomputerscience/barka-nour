@@ -23,13 +23,13 @@ export function HomePage({ lang, onAddToCart }: Props) {
         <div className="relative mx-auto max-w-[1280px] px-4 lg:px-6 py-12 lg:py-20">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
-              <Badge variant="secondary" className="mb-4 bg-white border-bn-200 text-bn-800 gap-1.5">
+              <Badge variant="secondary" className="mb-4 bg-white border-bn-200 text-olive-700 gap-1.5">
                 <Sparkles className="h-3 w-3" />
                 {lang === 'ar' ? 'صناعة تونسية أصيلة • جودة مضمونة' : lang === 'en' ? 'Authentic Tunisian craft • Premium quality' : 'Artisanat tunisien authentique • Qualité premium'}
               </Badge>
               <h1 className="font-display text-[36px] lg:text-[52px] font-bold leading-[0.9] tracking-tight text-ink-900">
                 {lang === 'ar' ? 'بركة نور' : 'Barka Nour'}<br />
-                <span className="text-bn-600">{lang === 'ar' ? 'جوهر الحرف' : lang === 'en' ? 'Essence of Craft' : 'L\'essence de l\'artisanat'}</span>
+                <span className="text-olive-700">{lang === 'ar' ? 'جوهر الحرف' : lang === 'en' ? 'Essence of Craft' : 'L\'essence de l\'artisanat'}</span>
               </h1>
               <p className="mt-5 text-[17px] leading-relaxed text-ink-600 max-w-[480px]">
                 {lang === 'ar' ? 'منتجات تونسية أصيلة مختارة بعناية. كل منتج يحكي قصة حرفي. توصيل في جميع أنحاء تونس، الدفع عند الاستلام.' :
@@ -37,7 +37,7 @@ export function HomePage({ lang, onAddToCart }: Props) {
                  'Des produits tunisiens authentiques, sélectionnés avec soin. Chaque produit raconte l\'histoire d\'un artisan. Livraison partout en Tunisie, paiement à la livraison.'}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link to="/shop"><Button size="lg" className="h-12 px-7 bg-bn-600 hover:bg-bn-700 text-white rounded-full">{lang === 'ar' ? 'اكتشف المجموعة' : lang === 'en' ? 'Discover collection' : 'Découvrir la collection'} <ArrowRight className="h-5 w-5" /></Button></Link>
+                <Link to="/shop"><Button size="lg" className="h-12 px-7 bg-olive-700 hover:bg-olive-800 text-white rounded-full">{lang === 'ar' ? 'اكتشف المجموعة' : lang === 'en' ? 'Discover collection' : 'Découvrir la collection'} <ArrowRight className="h-5 w-5" /></Button></Link>
                 <Link to="/about"><Button variant="outline" size="lg" className="h-12 px-7 rounded-full bg-white">{lang === 'ar' ? 'قصتنا' : lang === 'en' ? 'Our story' : 'Notre histoire'}</Button></Link>
               </div>
               <div className="mt-8 flex items-center gap-6 text-sm">
@@ -58,18 +58,18 @@ export function HomePage({ lang, onAddToCart }: Props) {
                       <div className="flex-1 rounded-xl bg-olive-50 flex items-center justify-center"><Package className="h-10 w-10 text-olive-800/40" /></div>
                       <div className="mt-3"><p className="text-sm font-bold">Tapis Berbère</p><p className="text-xs text-ink-500">Tissé main • Kairouan</p><p className="text-sm font-bold mt-1">299,000 TND</p></div>
                     </div>
-                    <div className="aspect-square rounded-[1.5rem] bg-ink-900 text-white p-5 flex flex-col justify-between">
+                    <div className="aspect-square rounded-[1.5rem] bg-olive-700 text-white p-5 flex flex-col justify-between">
                       <p className="text-xs opacity-70">Offre spéciale</p>
                       <div><p className="text-[28px] font-bold leading-none">-25%</p><p className="text-xs opacity-70 mt-1">Sur collection maison</p></div>
                     </div>
                   </div>
                   <div className="space-y-4 pt-8">
                     <div className="aspect-square rounded-[1.5rem] bg-bn-50 border border-bn-100 p-4 flex flex-col justify-between">
-                      <div className="h-12 w-12 rounded-xl bg-white border flex items-center justify-center"><Truck className="h-6 w-6 text-bn-600" /></div>
+                      <div className="h-12 w-12 rounded-xl bg-white border flex items-center justify-center"><Truck className="h-6 w-6 text-olive-700" /></div>
                       <div><p className="text-sm font-bold">Livraison offerte</p><p className="text-xs text-ink-500">Dès 150 TND</p></div>
                     </div>
                     <div className="aspect-[3/4] rounded-[1.5rem] bg-white border shadow-sm flex flex-col p-4">
-                      <div className="flex-1 rounded-xl bg-[#fefce8] flex items-center justify-center"><Package className="h-10 w-10 text-bn-800/30" /></div>
+                      <div className="flex-1 rounded-xl bg-[#fefce8] flex items-center justify-center"><Package className="h-10 w-10 text-olive-700/30" /></div>
                       <div className="mt-3"><p className="text-sm font-bold">Sac Tote Bio</p><p className="text-xs text-ink-500">Coton bio • Naturel</p><p className="text-sm font-bold mt-1">45,000 TND</p></div>
                     </div>
                   </div>
@@ -79,7 +79,7 @@ export function HomePage({ lang, onAddToCart }: Props) {
                   <div><p className="text-xs font-bold">Paiement sécurisé</p><p className="text-[11px] text-ink-500">COD • Sans carte</p></div>
                 </div>
                 <div className="absolute bottom-[15%] -left-4 rounded-2xl bg-white border shadow-xl p-3 flex items-center gap-3 animate-float" style={{ animationDelay: '1s' }}>
-                  <div className="h-10 w-10 rounded-xl bg-bn-50 flex items-center justify-center"><MapPin className="h-5 w-5 text-bn-600" /></div>
+                  <div className="h-10 w-10 rounded-xl bg-bn-50 flex items-center justify-center"><MapPin className="h-5 w-5 text-olive-700" /></div>
                   <div><p className="text-xs font-bold">24 Gouvernorats</p><p className="text-[11px] text-ink-500">Livraison 24-72h</p></div>
                 </div>
               </div>
@@ -124,8 +124,8 @@ export function HomePage({ lang, onAddToCart }: Props) {
               <Link to={`/products/${product.slug}`}>
                 <div className="aspect-[4/3] bg-[#fdfcf8] relative overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center"><Package className="h-12 w-12 text-olive-200 group-hover:scale-110 transition-transform" /></div>
-                  {product.compare_at_price && <Badge className="absolute top-3 left-3 bg-ink-900 text-white">-{Math.round((1-product.price/product.compare_at_price)*100)}%</Badge>}
-                  {product.featured && <Badge className="absolute top-3 right-3 bg-bn-600 text-white"><Star className="h-3 w-3" /> Vedette</Badge>}
+                  {product.compare_at_price && <Badge className="absolute top-3 left-3 bg-olive-700 text-white">-{Math.round((1-product.price/product.compare_at_price)*100)}%</Badge>}
+                  {product.featured && <Badge className="absolute top-3 right-3 bg-bn-400 text-ink-800"><Star className="h-3 w-3" /> Vedette</Badge>}
                 </div>
               </Link>
               <CardContent className="p-4">
@@ -136,7 +136,7 @@ export function HomePage({ lang, onAddToCart }: Props) {
                   <span className={`text-xs px-2 py-1 rounded-full ${product.stock_quantity > 5 ? 'bg-emerald-50 text-emerald-700' : product.stock_quantity > 0 ? 'bg-amber-50 text-amber-700' : 'bg-red-50 text-red-700'}`}>{product.stock_quantity > 0 ? `${product.stock_quantity} en stock` : 'Rupture'}</span>
                 </div>
                 <div className="mt-3 flex gap-2">
-                  <Button onClick={() => onAddToCart(product.id)} disabled={product.stock_quantity === 0} className="flex-1 rounded-full bg-ink-900 hover:bg-ink-800 text-white h-9 text-sm"><Package className="h-4 w-4" /> {lang === 'ar' ? 'أضف' : lang === 'en' ? 'Add' : 'Ajouter'}</Button>
+                  <Button onClick={() => onAddToCart(product.id)} disabled={product.stock_quantity === 0} className="flex-1 rounded-full bg-olive-700 hover:bg-olive-800 text-white h-9 text-sm"><Package className="h-4 w-4" /> {lang === 'ar' ? 'أضف' : lang === 'en' ? 'Add' : 'Ajouter'}</Button>
                   <Button variant="outline" size="icon" className="h-9 w-9 rounded-full"><Heart className="h-4 w-4" /></Button>
                 </div>
               </CardContent>
@@ -147,7 +147,7 @@ export function HomePage({ lang, onAddToCart }: Props) {
 
       {/* Trust */}
       <section className="mx-auto max-w-[1280px] px-4 lg:px-6 py-12">
-        <div className="rounded-[2rem] bg-ink-900 text-white p-8 lg:p-12 grid md:grid-cols-3 gap-8">
+        <div className="rounded-[2rem] bg-olive-700 text-white p-8 lg:p-12 grid md:grid-cols-3 gap-8">
           <div className="flex gap-4"><div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><Truck className="h-6 w-6" /></div><div><p className="font-semibold">Livraison partout en Tunisie</p><p className="text-sm text-ink-300 mt-1 leading-relaxed">24 gouvernorats, 24-72h, suivi SMS. Frais 7-10 TND, gratuit dès 150 TND.</p></div></div>
           <div className="flex gap-4"><div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><ShieldCheck className="h-6 w-6" /></div><div><p className="font-semibold">Paiement à la livraison</p><p className="text-sm text-ink-300 mt-1 leading-relaxed">Payez quand vous recevez. Pas de carte nécessaire. Confirmation par téléphone.</p></div></div>
           <div className="flex gap-4"><div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><Package className="h-6 w-6" /></div><div><p className="font-semibold">Artisanat authentique</p><p className="text-sm text-ink-300 mt-1 leading-relaxed">Produits sélectionnés pour leur qualité, fabrication locale et matériaux durables.</p></div></div>

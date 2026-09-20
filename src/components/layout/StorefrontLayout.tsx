@@ -31,8 +31,8 @@ export function StorefrontLayout({ children, cartCount, lang, setLang, onLangCha
   ]
 
   return (
-    <div className="min-h-screen bg-white" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
-      <div className="bg-ink-900 text-white text-xs py-2 px-4 text-center">
+    <div className="min-h-screen bg-[#f7f6f2]" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+      <div className="bg-olive-700 text-white text-xs py-2 px-4 text-center">
         <span className="inline-flex items-center gap-2">
           <Truck className="h-3.5 w-3.5" /> 
           {lang === 'ar' ? 'توصيل في جميع أنحاء تونس • الدفع عند الاستلام • إرجاع 7 أيام' : 

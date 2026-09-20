@@ -80,14 +80,14 @@ export function ShopPage({ lang, onAddToCart }: Props) {
                 <Link to={`/products/${product.slug}`}>
                   <div className="aspect-[4/3] bg-[#fdfcf8] relative">
                     <div className="absolute inset-0 flex items-center justify-center"><Package className="h-10 w-10 text-olive-200 group-hover:scale-110 transition-transform" /></div>
-                    {product.compare_at_price && <Badge className="absolute top-2 left-2 bg-ink-900 text-white text-[10px]">-{Math.round((1-product.price/product.compare_at_price)*100)}%</Badge>}
+                    {product.compare_at_price && <Badge className="absolute top-2 left-2 bg-olive-700 text-white text-[10px]">-{Math.round((1-product.price/product.compare_at_price)*100)}%</Badge>}
                   </div>
                 </Link>
                 <CardContent className="p-3">
                   <p className="text-[11px] text-ink-500 font-mono">{product.sku}</p>
                   <Link to={`/products/${product.slug}`}><h3 className="font-medium text-sm leading-tight line-clamp-2 hover:text-bn-700">{product.name}</h3></Link>
                   <div className="mt-2 flex items-center justify-between"><span className="font-bold text-sm">{formatTND(product.price)}</span><span className="text-[11px] text-ink-500">{product.stock_quantity} stock</span></div>
-                  <Button onClick={() => onAddToCart(product.id)} className="w-full mt-3 h-8 rounded-full bg-ink-900 hover:bg-ink-800 text-white text-xs">Ajouter</Button>
+                  <Button onClick={() => onAddToCart(product.id)} className="w-full mt-3 h-8 rounded-full bg-olive-700 hover:bg-olive-800 text-white text-xs">Ajouter</Button>
                 </CardContent>
               </Card>
             ))}

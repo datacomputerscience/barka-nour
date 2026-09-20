@@ -1,79 +1,92 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bn-50: #fefce8;
-  --color-bn-100: #fef9c3;
-  --color-bn-200: #fef08a;
-  --color-bn-300: #fde047;
-  --color-bn-400: #facc15;
-  --color-bn-500: #ca8a04;
-  --color-bn-600: #a16207;
-  --color-bn-700: #854d0e;
-  --color-bn-800: #713f12;
-  --color-bn-900: #422006;
-  --color-bn-950: #1a0f00;
+  /* Geev-inspired palette extracted from https://www.geev.com */
+  /* Primary yellow mango #FFC639 + dark green #284B41 */
+  --color-bn-50: #fff7e2;
+  --color-bn-100: #ffeeb3;
+  --color-bn-200: #ffde7a;
+  --color-bn-300: #ffcc47;
+  --color-bn-400: #ffc639;
+  --color-bn-500: #e8ab15;
+  --color-bn-600: #c78f0f;
+  --color-bn-700: #a6730c;
+  --color-bn-800: #855a0a;
+  --color-bn-900: #634307;
+  --color-bn-950: #3d2804;
 
-  --color-olive-50: #f7f7f2;
-  --color-olive-100: #e8e8d5;
-  --color-olive-200: #d1d1b0;
-  --color-olive-300: #b8b88a;
-  --color-olive-400: #9a9a6a;
-  --color-olive-500: #7a7a4f;
-  --color-olive-800: #3d3d28;
-  --color-olive-900: #2a2a1a;
+  --color-olive-50: #f0f5f3;
+  --color-olive-100: #d4e2de;
+  --color-olive-200: #b8d0c8;
+  --color-olive-300: #8fb8ad;
+  --color-olive-400: #5a9a8a;
+  --color-olive-500: #408b25;
+  --color-olive-600: #2e6b1c;
+  --color-olive-700: #284b41;
+  --color-olive-800: #1e3a32;
+  --color-olive-900: #142822;
 
-  --color-ink-50: #f8f8f7;
-  --color-ink-100: #efefed;
-  --color-ink-200: #d9d9d6;
-  --color-ink-300: #b8b8b3;
-  --color-ink-400: #8e8e88;
-  --color-ink-500: #6b6b66;
-  --color-ink-600: #4b4b47;
-  --color-ink-700: #374151;
-  --color-ink-800: #1f1f1a;
-  --color-ink-900: #11110f;
-  --color-ink-950: #0a0a08;
+  --color-ink-50: #f7f6f2;
+  --color-ink-100: #e9e7e0;
+  --color-ink-200: #dbd8cd;
+  --color-ink-300: #aaa69e;
+  --color-ink-400: #89857c;
+  --color-ink-500: #757067;
+  --color-ink-600: #5a5750;
+  --color-ink-700: #373328;
+  --color-ink-800: #282000;
+  --color-ink-900: #1a1500;
+  --color-ink-950: #0f0d00;
 
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Playfair Display", "Plus Jakarta Sans", serif;
+  --font-display: "Plus Jakarta Sans", "Fraunces", serif;
   --font-arabic: "IBM Plex Sans Arabic", "Noto Sans Arabic", sans-serif;
 }
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222 47% 11%;
+  --background: 40 20% 97%;
+  --foreground: 45 15% 15%;
   --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
-  --primary: 45 93% 47%;
-  --primary-foreground: 0 0% 98%;
-  --secondary: 60 20% 94%;
-  --secondary-foreground: 222 47% 11%;
-  --muted: 60 20% 96%;
-  --muted-foreground: 215 16% 47%;
-  --border: 214 32% 91%;
-  --input: 214 32% 91%;
-  --ring: 45 93% 47%;
+  --card-foreground: 45 15% 15%;
+  --primary: 152 30% 20%;
+  --primary-foreground: 45 100% 97%;
+  --secondary: 45 30% 94%;
+  --secondary-foreground: 45 15% 15%;
+  --muted: 40 15% 94%;
+  --muted-foreground: 40 8% 46%;
+  --border: 40 15% 88%;
+  --input: 40 15% 88%;
+  --ring: 45 100% 60%;
   --radius: 0.75rem;
 }
 
 * { border-color: hsl(var(--border)); }
 html { scroll-behavior: smooth; }
 body {
-  background: #fff;
-  color: hsl(var(--foreground));
+  background: #f7f6f2;
+  color: #373328;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
 [dir="rtl"] body { font-family: var(--font-arabic); }
 
 .bn-gradient {
-  background: linear-gradient(135deg, #ca8a04 0%, #854d0e 100%);
+  background: linear-gradient(135deg, #284b41 0%, #1e3a32 50%, #ffc639 100%);
 }
 .bn-gradient-soft {
-  background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
+  background: linear-gradient(135deg, #fff7e2 0%, #ffeeb3 100%);
+}
+.bn-gradient-yellow {
+  background: linear-gradient(135deg, #ffc639 0%, #e8ab15 100%);
+}
+.bn-gradient-green {
+  background: linear-gradient(135deg, #284b41 0%, #408b25 100%);
 }
 .bn-shadow {
-  box-shadow: 0 4px 24px rgba(202, 138, 4, 0.12), 0 1px 2px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 24px rgba(40, 75, 65, 0.12), 0 1px 2px rgba(0,0,0,0.04);
+}
+.bn-shadow-yellow {
+  box-shadow: 0 4px 24px rgba(255, 198, 57, 0.25), 0 1px 2px rgba(0,0,0,0.04);
 }
 
 .scrollbar-hide {

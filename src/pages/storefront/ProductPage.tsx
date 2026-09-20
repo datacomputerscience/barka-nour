@@ -37,7 +37,7 @@ export function ProductPage({ lang, onAddToCart }: Props) {
         <div className="space-y-4">
           <div className="aspect-[4/3] rounded-[1.5rem] bg-[#fdfcf8] border border-olive-100 flex items-center justify-center relative overflow-hidden">
             <Package className="h-20 w-20 text-olive-200" />
-            {product.compare_at_price && <Badge className="absolute top-4 left-4 bg-ink-900 text-white">-{Math.round((1-product.price/product.compare_at_price)*100)}% • {formatTND(product.compare_at_price - product.price)} économisés</Badge>}
+            {product.compare_at_price && <Badge className="absolute top-4 left-4 bg-olive-700 text-white">-{Math.round((1-product.price/product.compare_at_price)*100)}% • {formatTND(product.compare_at_price - product.price)} économisés</Badge>}
             <Badge className="absolute top-4 right-4 bg-white border text-ink-700"><Star className="h-3 w-3 fill-amber-400 text-amber-400" /> 4.8 (24 avis)</Badge>
           </div>
           <div className="grid grid-cols-4 gap-3">
@@ -88,7 +88,7 @@ export function ProductPage({ lang, onAddToCart }: Props) {
             </div>
 
             <div className="flex gap-3">
-              <Button onClick={handleAddToCart} disabled={product.stock_quantity === 0} className="flex-1 h-12 rounded-full bg-ink-900 hover:bg-ink-800 text-white"><ShoppingBag className="h-5 w-5" /> {lang === 'ar' ? 'أضف إلى السلة' : 'Ajouter au panier'} • {formatTND(product.price * qty)}</Button>
+              <Button onClick={handleAddToCart} disabled={product.stock_quantity === 0} className="flex-1 h-12 rounded-full bg-olive-700 hover:bg-olive-800 text-white"><ShoppingBag className="h-5 w-5" /> {lang === 'ar' ? 'أضف إلى السلة' : 'Ajouter au panier'} • {formatTND(product.price * qty)}</Button>
               <Button variant="outline" size="icon" className="h-12 w-12 rounded-full"><Heart className="h-5 w-5" /></Button>
             </div>
 

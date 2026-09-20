@@ -41,7 +41,7 @@ export function OrderConfirmationPage() {
           <CardContent className="p-5">
             <h3 className="font-semibold text-sm mb-3">Que se passe-t-il maintenant?</h3>
             <div className="space-y-3 text-sm">
-              <div className="flex gap-3"><div className="h-8 w-8 rounded-full bg-ink-900 text-white flex items-center justify-center flex-shrink-0"><Phone className="h-4 w-4" /></div><div><p className="font-medium">Appel de confirmation</p><p className="text-xs text-ink-600">Notre équipe vous appelle sous 2h pour confirmer adresse & créneau.</p></div></div>
+              <div className="flex gap-3"><div className="h-8 w-8 rounded-full bg-olive-700 text-white flex items-center justify-center flex-shrink-0"><Phone className="h-4 w-4" /></div><div><p className="font-medium">Appel de confirmation</p><p className="text-xs text-ink-600">Notre équipe vous appelle sous 2h pour confirmer adresse & créneau.</p></div></div>
               <div className="flex gap-3"><div className="h-8 w-8 rounded-full bg-bn-100 text-bn-700 flex items-center justify-center flex-shrink-0"><Package className="h-4 w-4" /></div><div><p className="font-medium">Préparation colis</p><p className="text-xs text-ink-600">Vérification stock réel, emballage éco, étiquette livraison.</p></div></div>
               <div className="flex gap-3"><div className="h-8 w-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0"><Truck className="h-4 w-4" /></div><div><p className="font-medium">Expédition & tracking</p><p className="text-xs text-ink-600">SMS avec lien suivi. Paiement à la livraison en espèces.</p></div></div>
             </div>
@@ -50,7 +50,7 @@ export function OrderConfirmationPage() {
 
         <div className="flex gap-3">
           <Link to="/shop" className="flex-1"><Button variant="outline" className="w-full h-11 rounded-full">Continuer achats</Button></Link>
-          <Link to="/" className="flex-1"><Button className="w-full h-11 rounded-full bg-ink-900 text-white">Accueil <ArrowRight className="h-4 w-4" /></Button></Link>
+          <Link to="/" className="flex-1"><Button className="w-full h-11 rounded-full bg-olive-700 text-white">Accueil <ArrowRight className="h-4 w-4" /></Button></Link>
         </div>
 
         <p className="text-[11px] text-center text-ink-500 leading-relaxed">Commande sécurisée. Support: contact@barkanour.tn</p>

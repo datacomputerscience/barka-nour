@@ -38,7 +38,7 @@ export function CartPage({ lang, items, onUpdateQty, onRemove }: Props) {
         <div className="mx-auto h-20 w-20 rounded-[1.5rem] bg-ink-50 border flex items-center justify-center mb-6"><Package className="h-10 w-10 text-ink-300" /></div>
         <h1 className="text-[24px] font-bold">Votre panier est vide</h1>
         <p className="text-ink-600 mt-2 text-sm max-w-[400px] mx-auto">Découvrez nos produits artisanaux tunisiens, qualité premium et fabrication locale.</p>
-        <Link to="/shop"><Button className="mt-6 rounded-full bg-ink-900 text-white h-11 px-8">Continuer achats <ArrowRight className="h-4 w-4" /></Button></Link>
+        <Link to="/shop"><Button className="mt-6 rounded-full bg-olive-700 text-white h-11 px-8">Continuer achats <ArrowRight className="h-4 w-4" /></Button></Link>
       </div>
     )
   }
@@ -95,7 +95,7 @@ export function CartPage({ lang, items, onUpdateQty, onRemove }: Props) {
                 <Button variant="outline" className="h-10 rounded-full">Appliquer</Button>
               </div>
 
-              <Link to="/checkout"><Button className="w-full h-12 rounded-full bg-ink-900 hover:bg-ink-800 text-white">Passer commande <ArrowRight className="h-4 w-4" /></Button></Link>
+              <Link to="/checkout"><Button className="w-full h-12 rounded-full bg-olive-700 hover:bg-olive-800 text-white">Passer commande <ArrowRight className="h-4 w-4" /></Button></Link>
 
               <div className="flex items-center justify-center gap-4 text-[11px] text-ink-500 pt-2">
                 <span className="flex items-center gap-1"><ShieldCheck className="h-3.5 w-3.5" /> Paiement sécurisé</span>
@@ -106,7 +106,7 @@ export function CartPage({ lang, items, onUpdateQty, onRemove }: Props) {
             </CardContent>
           </Card>
 
-          <Card className="rounded-[1.25rem] bg-ink-900 text-white">
+          <Card className="rounded-[1.25rem] bg-olive-700 text-white">
             <CardContent className="p-5">
               <p className="font-semibold text-sm">Barka Nour</p>
               <p className="text-xs text-white/70 mt-1 leading-relaxed">Boutique tunisienne • Qualité premium • Livraison 24-72h partout en Tunisie • Paiement à la livraison</p>

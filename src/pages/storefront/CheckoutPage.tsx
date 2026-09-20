@@ -146,7 +146,7 @@ export function CheckoutPage({ lang, items, onOrderPlaced }: Props) {
                 <div className="flex justify-between font-bold text-[16px] border-t pt-2"><span>Total à payer</span><span>{formatTND(total)}</span></div>
               </div>
 
-              <Button type="submit" disabled={loading || items.length === 0} className="w-full h-12 rounded-full bg-ink-900 hover:bg-ink-800 text-white">
+              <Button type="submit" disabled={loading || items.length === 0} className="w-full h-12 rounded-full bg-olive-700 hover:bg-olive-800 text-white">
                 {loading ? 'Traitement sécurisé...' : `Confirmer • ${formatTND(total)}`}
               </Button>
 
