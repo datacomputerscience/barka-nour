@@ -1,0 +1,5 @@
+# Barka Nour - Cloudflare Pages SPA fallback
+# No infinite loop - use 404.html for SPA
+
+# API handled via functions if present
+/api/* /api/:splat 200

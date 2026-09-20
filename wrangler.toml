@@ -1,0 +1,8 @@
+name = "barka-nour"
+compatibility_date = "2024-09-23"
+pages_build_output_dir = "./dist"
+
+[vars]
+VITE_APP_NAME = "Barka Nour"
+VITE_CURRENCY = "TND"
+VITE_DEFAULT_LANGUAGE = "fr"
