@@ -35,9 +35,9 @@ export function StorefrontLayout({ children, cartCount, lang, setLang, onLangCha
       <div className="bg-olive-700 text-white text-xs py-2 px-4 text-center">
         <span className="inline-flex items-center gap-2">
           <Truck className="h-3.5 w-3.5" /> 
-          {lang === 'ar' ? 'توصيل في جميع أنحاء تونس • الدفع عند الاستلام • إرجاع 7 أيام' : 
-           lang === 'en' ? 'Delivery across Tunisia • Cash on Delivery • 7-day returns' :
-           'Livraison partout en Tunisie • Paiement à la livraison • Retour 7 jours'}
+          {lang === 'ar' ? 'توصيل في جميع أنحاء تونس • الدفع عند الاستلام • جودة مضمونة' : 
+           lang === 'en' ? 'Delivery across Tunisia • Cash on Delivery • Premium quality' :
+           'Livraison partout en Tunisie • Paiement à la livraison • Qualité premium'}
         </span>
       </div>
 
@@ -120,7 +120,6 @@ export function StorefrontLayout({ children, cartCount, lang, setLang, onLangCha
               <div className="space-y-2 text-sm text-ink-600">
                 <p>{lang === 'ar' ? 'تتبع الطلب' : lang === 'en' ? 'Track order' : 'Suivi commande'}</p>
                 <p>{lang === 'ar' ? 'الشحن' : lang === 'en' ? 'Shipping' : 'Livraison'}</p>
-                <p>{lang === 'ar' ? 'الإرجاع' : lang === 'en' ? 'Returns' : 'Retours'}</p>
                 <p>Contact</p>
               </div>
             </div>

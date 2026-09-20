@@ -156,7 +156,7 @@ export function CheckoutPage({ lang, items, onOrderPlaced }: Props) {
               </div>
 
               <div className="rounded-xl bg-ink-50 border p-3 text-[11px] text-ink-600 leading-relaxed">
-                En confirmant, vous acceptez nos conditions de vente. Livraison partout en Tunisie, retours sous 7 jours.
+                En confirmant, vous acceptez nos conditions de vente. Livraison partout en Tunisie, support réactif.
               </div>
             </CardContent>
           </Card>

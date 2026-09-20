@@ -62,7 +62,7 @@ export function HomePage({ lang, onAddToCart }: Props) {
               <div className="mt-8 grid grid-cols-3 gap-4 max-w-[520px]">
                 <div className="flex items-center gap-2 text-sm"><div className="h-8 w-8 rounded-full bg-emerald-50 flex items-center justify-center"><Check className="h-4 w-4 text-emerald-600" /></div><span className="font-medium text-ink-700">Paiement<br /><span className="text-ink-500 font-normal text-xs">à la livraison</span></span></div>
                 <div className="flex items-center gap-2 text-sm"><div className="h-8 w-8 rounded-full bg-bn-50 flex items-center justify-center"><Truck className="h-4 w-4 text-bn-600" /></div><span className="font-medium text-ink-700">Livraison<br /><span className="text-ink-500 font-normal text-xs">24-72h • 7-10 TND</span></span></div>
-                <div className="flex items-center gap-2 text-sm"><div className="h-8 w-8 rounded-full bg-olive-50 flex items-center justify-center"><ShieldCheck className="h-4 w-4 text-olive-700" /></div><span className="font-medium text-ink-700">Retour<br /><span className="text-ink-500 font-normal text-xs">7 jours</span></span></div>
+                <div className="flex items-center gap-2 text-sm"><div className="h-8 w-8 rounded-full bg-olive-50 flex items-center justify-center"><ShieldCheck className="h-4 w-4 text-olive-700" /></div><span className="font-medium text-ink-700">Qualité<br /><span className="text-ink-500 font-normal text-xs">premium</span></span></div>
               </div>
             </div>
 
@@ -193,7 +193,7 @@ export function HomePage({ lang, onAddToCart }: Props) {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="flex gap-3"><div className="h-10 w-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><Truck className="h-5 w-5" /></div><div><p className="font-semibold text-[15px]">Livraison partout</p><p className="text-sm text-white/70 mt-1 leading-relaxed">24 gouvernorats • 24-72h • 7-10 TND • Gratuit dès 150 TND • Suivi SMS</p></div></div>
             <div className="flex gap-3"><div className="h-10 w-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><ShieldCheck className="h-5 w-5" /></div><div><p className="font-semibold text-[15px]">Paiement à la livraison</p><p className="text-sm text-white/70 mt-1 leading-relaxed">Pas de carte • Payez en espèces à réception • Vérification colis</p></div></div>
-            <div className="flex gap-3"><div className="h-10 w-10 rounded-xl bg-bn-400/20 flex items-center justify-center shrink-0"><Package className="h-5 w-5 text-bn-300" /></div><div><p className="font-semibold text-[15px]">Qualité garantie</p><p className="text-sm text-white/70 mt-1 leading-relaxed">Artisanat tunisien • Matériaux durables • Retour 7 jours • Support réactif</p></div></div>
+            <div className="flex gap-3"><div className="h-10 w-10 rounded-xl bg-bn-400/20 flex items-center justify-center shrink-0"><Package className="h-5 w-5 text-bn-300" /></div><div><p className="font-semibold text-[15px]">Qualité garantie</p><p className="text-sm text-white/70 mt-1 leading-relaxed">Artisanat tunisien • Matériaux durables • Support réactif • Fabrication locale</p></div></div>
           </div>
         </div>
       </section>

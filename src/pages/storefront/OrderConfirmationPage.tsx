@@ -67,7 +67,7 @@ export function AboutPage() {
       <div className="mt-8 grid md:grid-cols-3 gap-4">
         <Card><CardContent className="p-5"><h3 className="font-semibold">Artisanat tunisien</h3><p className="text-sm text-ink-600 mt-2">Tapis berbère, bocaux verre, tote bio, huile argan, support bambou - 100% Tunisie.</p></CardContent></Card>
         <Card><CardContent className="p-5"><h3 className="font-semibold">Qualité & confiance</h3><p className="text-sm text-ink-600 mt-2">Produits sélectionnés, matériaux durables, fabrication locale et service client dédié.</p></CardContent></Card>
-        <Card><CardContent className="p-5"><h3 className="font-semibold">Livraison Tunisie</h3><p className="text-sm text-ink-600 mt-2">24 gouvernorats, paiement à la livraison, suivi SMS et retours faciles.</p></CardContent></Card>
+        <Card><CardContent className="p-5"><h3 className="font-semibold">Livraison Tunisie</h3><p className="text-sm text-ink-600 mt-2">24 gouvernorats, paiement à la livraison, suivi SMS et support réactif.</p></CardContent></Card>
       </div>
     </div>
   )
