@@ -1,8 +1,17 @@
 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M 38 8 C 58 4, 78 12, 86 32 C 92 50, 85 72, 68 84 C 50 96, 24 94, 10 78 C 0 62, 2 38, 14 22 C 20 13, 28 10, 38 8 Z" fill="#284B41"/>
-  <path d="M 26 36 C 26 36, 36 32, 52 34 C 64 36, 74 42, 72 58 C 70 64, 58 66, 46 66 C 34 66, 22 62, 22 52 C 22 44, 24 40, 26 36 Z" fill="white"/>
-  <path d="M 28 48 C 28 46, 32 44, 50 45 C 62 46, 70 48, 70 50 L 70 60 C 70 62, 64 65, 48 66 C 32 66, 26 62, 26 54 L 26 48 Z" fill="#FFC639"/>
-  <path d="M 48 22 L 64 24 C 68 25, 70 27, 69 32 L 67 40 C 66 41, 58 42, 50 41 L 46 30 C 46 26, 47 23, 48 22 Z" fill="#FFC639"/>
-  <path d="M 34 30 C 32 27, 27 27.5, 27 31 C 27 33, 29 35, 33 38 L 36 40 L 40 36 C 43 33, 43 28, 40 28 C 38 28, 36 29, 34 30 Z" fill="#FFC639"/>
-  <path d="M 20 68 Q 45 88, 72 66" stroke="#FFC639" strokeWidth="7" strokeLinecap="round" fill="none"/>
+  <circle cx="50" cy="58" r="2.5" fill="#C9A34A"/>
+  <g stroke="#C9A34A" stroke-width="0.7" opacity="0.8" stroke-linecap="round">
+    <line x1="50" y1="58" x2="50" y2="12"/><line x1="50" y1="58" x2="68" y2="20"/><line x1="50" y1="58" x2="82" y2="38"/><line x1="50" y1="58" x2="88" y2="58"/><line x1="50" y1="58" x2="70" y2="78"/><line x1="50" y1="58" x2="30" y2="78"/><line x1="50" y1="58" x2="12" y2="58"/><line x1="50" y1="58" x2="18" y2="38"/>
+  </g>
+  <path d="M46 90 C44 82,46 74,44 66 C42 58,40 50,44 44 C48 40,52 40,56 44 C60 50,58 58,56 66 C54 74,56 82,54 90 Z" fill="#3D4F2A"/>
+  <path d="M44 44 C38 40,28 36,16 42" stroke="#3D4F2A" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M56 44 C62 40,72 36,84 42" stroke="#3D4F2A" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <g fill="#526B3A">
+    <ellipse cx="42" cy="18" rx="2" ry="4.5" transform="rotate(-15 42 18)"/>
+    <ellipse cx="58" cy="18" rx="2" ry="4.5" transform="rotate(15 58 18)"/>
+    <ellipse cx="16" cy="44" rx="1.8" ry="4" transform="rotate(-30 16 44)"/>
+    <ellipse cx="84" cy="44" rx="1.8" ry="4" transform="rotate(30 84 44)"/>
+    <ellipse cx="28" cy="54" rx="1.5" ry="3" transform="rotate(-15 28 54)"/>
+    <ellipse cx="72" cy="54" rx="1.5" ry="3" transform="rotate(15 72 54)"/>
+  </g>
 </svg>
