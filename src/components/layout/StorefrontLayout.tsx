@@ -3,8 +3,9 @@ import { Link, useLocation } from 'react-router-dom'
 import { BarkaNourLogo } from './BarkaNourLogo'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Search, ShoppingBag, Heart, Menu, X, Globe, Package, Truck, ShieldCheck } from 'lucide-react'
+import { Search, ShoppingBag, Heart, Menu, X, Globe, Package, Truck, ShieldCheck, Sun, Moon } from 'lucide-react'
 import { Language } from '@/i18n'
+import { useTheme } from '@/lib/themeContext'
 
 interface Props {
   children: React.ReactNode
@@ -22,6 +23,7 @@ export function StorefrontLayout({ children, cartCount, lang, setLang, onLangCha
   }
   const [mobileMenu, setMobileMenu] = useState(false)
   const location = useLocation()
+  const { theme, toggleTheme } = useTheme()
 
   const nav = [
     { href: '/', label: lang === 'ar' ? 'الرئيسية' : lang === 'en' ? 'Home' : 'Accueil' },
@@ -70,10 +72,13 @@ export function StorefrontLayout({ children, cartCount, lang, setLang, onLangCha
               <Search className="absolute left-3 top-2.5 h-4 w-4 text-ink-400" />
               <Input placeholder={lang === 'ar' ? 'بحث...' : lang === 'en' ? 'Search...' : 'Rechercher...'} className="pl-9 w-[180px] h-9 rounded-full bg-ink-50 border-ink-100" />
             </div>
+            <Button variant="ghost" size="icon" className="rounded-full" onClick={toggleTheme} title={theme === 'dark' ? 'Mode clair' : 'Mode sombre'}>
+              {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </Button>
             <Button variant="ghost" size="icon" className="rounded-full"><Heart className="h-5 w-5" /></Button>
             <Button variant="ghost" size="icon" className="rounded-full relative" onClick={onCartOpen}>
               <ShoppingBag className="h-5 w-5" />
-              {cartCount > 0 && <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-bn-600 text-white text-[11px] font-bold flex items-center justify-center">{cartCount}</span>}
+              {cartCount > 0 && <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-bn-400 text-ink-800 text-[11px] font-bold flex items-center justify-center">{cartCount}</span>}
             </Button>
           </div>
         </div>

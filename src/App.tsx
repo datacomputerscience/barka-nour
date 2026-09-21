@@ -18,6 +18,7 @@ import { MetaPage, DeliveryPage, AnalyticsPage, SettingsPage } from '@/pages/adm
 import { DonationsAdminPage } from '@/pages/admin/DonationsAdminPage'
 import { KiwiConfigPage, CollectionConfigPage } from '@/pages/admin/KiwiAdminPage'
 import { CartProvider, useCart } from '@/lib/cartContext'
+import { ThemeProvider } from '@/lib/themeContext'
 import { Language } from '@/i18n'
 
 function StorefrontRoutes() {
@@ -74,12 +75,14 @@ function AdminRoutes() {
 export default function App() {
   return (
     <BrowserRouter>
-      <CartProvider>
-        <Routes>
-          <Route path="/admin/*" element={<AdminRoutes />} />
-          <Route path="/*" element={<StorefrontRoutes />} />
-        </Routes>
-      </CartProvider>
+      <ThemeProvider>
+        <CartProvider>
+          <Routes>
+            <Route path="/admin/*" element={<AdminRoutes />} />
+            <Route path="/*" element={<StorefrontRoutes />} />
+          </Routes>
+        </CartProvider>
+      </ThemeProvider>
     </BrowserRouter>
   )
 }

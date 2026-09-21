@@ -4,8 +4,9 @@ import {
   LayoutDashboard, ShoppingBag, Package, Tags, Boxes, Users, 
   Megaphone, Ticket, LayoutTemplate, Truck, CreditCard, 
   BarChart3, Palette, Settings, HelpCircle, Menu, X, LogOut, 
-  Store, ShieldCheck, FileText, Bell, Recycle, Gift, Coins
+  Store, ShieldCheck, FileText, Bell, Recycle, Gift, Coins, Sun, Moon
 } from 'lucide-react'
+import { useTheme } from '@/lib/themeContext'
 import { BarkaNourLogo } from './BarkaNourLogo'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
@@ -38,6 +39,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
+  const { theme, toggleTheme } = useTheme()
 
   return (
     <div className="min-h-screen bg-[#fdfcf8]">
@@ -109,6 +111,9 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
             </div>
           </div>
           <div className="flex items-center gap-2">
+            <Button variant="ghost" size="icon" className="rounded-full" onClick={toggleTheme} title={theme === 'dark' ? 'Mode clair' : 'Mode sombre'}>
+              {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </Button>
             <Link to="/" target="_blank"><Button variant="outline" size="sm"><Store className="h-4 w-4" /> Voir boutique</Button></Link>
             <Button variant="ghost" size="icon" className="rounded-full"><Bell className="h-5 w-5" /></Button>
             <div className="h-8 w-8 rounded-full bg-bn-100 border border-bn-200 flex items-center justify-center text-bn-700 font-bold text-xs">BN</div>
