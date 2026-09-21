@@ -1,40 +1,43 @@
 <svg width="400" height="400" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Transparent inner - no white fill, only gold border -->
+  <!-- Gold border - no white fill -->
   <circle cx="50" cy="50" r="44" stroke="#C9A34A" stroke-width="2.5" fill="none"/>
   
-  <!-- Light only - bright yellow rays #FFC639 - Nour -->
-  <g stroke="#FFC639" stroke-width="0.7" stroke-linecap="round" opacity="0.9">
-    <line x1="50" y1="42" x2="32" y2="16"/><line x1="50" y1="42" x2="26" y2="22"/><line x1="50" y1="42" x2="20" y2="30"/><line x1="50" y1="42" x2="16" y2="40"/>
-    <line x1="50" y1="42" x2="68" y2="16"/><line x1="50" y1="42" x2="74" y2="22"/><line x1="50" y1="42" x2="80" y2="30"/><line x1="50" y1="42" x2="84" y2="40"/>
-    <line x1="50" y1="42" x2="50" y2="12"/><line x1="50" y1="42" x2="86" y2="46"/><line x1="50" y1="42" x2="14" y2="46"/><line x1="50" y1="42" x2="80" y2="56"/><line x1="50" y1="42" x2="20" y2="56"/><line x1="50" y1="42" x2="50" y2="72"/>
+  <!-- Bright yellow glowing line between fig and olive leaves #FFC639 -->
+  <path d="M50 42 L50 72 M50 60 C 42 58, 32 58, 26 62 M50 60 C 58 58, 68 58, 74 62" stroke="#FFC639" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.95"/>
+  <path d="M50 42 L50 72 M50 60 C 42 58, 32 58, 26 62 M50 60 C 58 58, 68 58, 74 62" stroke="#FFEB3B" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.35"/>
+  
+  <!-- Top golden wheat - bright yellow glowing -->
+  <g fill="#FFC639">
+    <ellipse cx="50" cy="18" rx="2.5" ry="6" />
+    <ellipse cx="44" cy="24" rx="2.2" ry="5" transform="rotate(-15 44 24)"/>
+    <ellipse cx="56" cy="24" rx="2.2" ry="5" transform="rotate(15 56 24)"/>
+    <ellipse cx="42" cy="32" rx="2.2" ry="5" transform="rotate(-20 42 32)"/>
+    <ellipse cx="58" cy="32" rx="2.2" ry="5" transform="rotate(20 58 32)"/>
+    <ellipse cx="44" cy="40" rx="2" ry="4" transform="rotate(-15 44 40)"/>
+    <ellipse cx="56" cy="40" rx="2" ry="4" transform="rotate(15 56 40)"/>
   </g>
-  <g fill="#FFC639" opacity="0.35">
-    <circle cx="50" cy="42" r="10" />
+  <g stroke="#FFEB3B" stroke-width="0.6" opacity="0.6" stroke-linecap="round">
+    <line x1="50" y1="42" x2="50" y2="14"/><line x1="50" y1="42" x2="36" y2="20"/><line x1="50" y1="42" x2="64" y2="20"/><line x1="50" y1="42" x2="30" y2="28"/><line x1="50" y1="42" x2="70" y2="28"/>
   </g>
-  <g fill="#FFEB3B" opacity="0.25">
-    <circle cx="50" cy="42" r="6" />
+  <circle cx="50" cy="42" r="8" fill="#FFC639" opacity="0.25"/>
+  
+  <!-- Small dark olive leaves #2F3D22 - middle level -->
+  <g fill="#2F3D22">
+    <ellipse cx="32" cy="52" rx="1.8" ry="4.5" transform="rotate(-20 32 52)"/>
+    <ellipse cx="36" cy="50" rx="1.6" ry="4" transform="rotate(-10 36 50)"/>
+    <ellipse cx="68" cy="52" rx="1.8" ry="4.5" transform="rotate(20 68 52)"/>
+    <ellipse cx="64" cy="50" rx="1.6" ry="4" transform="rotate(10 64 50)"/>
   </g>
   
-  <!-- Golden leaf top - bright yellow #FFC639 -->
-  <path d="M50 10 C 46 14, 40 20, 40 28 C 40 34, 46 40, 50 44 C 54 40, 60 34, 60 28 C 60 20, 54 14, 50 10 Z" fill="#FFC639"/>
-  <path d="M50 14 L50 40 M46 20 L50 24 L54 20 M44 28 L50 32 L56 28" stroke="white" stroke-width="0.8" stroke-linecap="round" fill="none" opacity="0.95"/>
-  
-  <!-- Small dark olive leaves #2F3D22 -->
-  <ellipse cx="38" cy="44" rx="3" ry="6.5" transform="rotate(-25 38 44)" fill="#2F3D22"/>
-  <ellipse cx="62" cy="44" rx="3" ry="6.5" transform="rotate(25 62 44)" fill="#2F3D22"/>
-  <ellipse cx="34" cy="52" rx="2.5" ry="5.5" transform="rotate(-15 34 52)" fill="#2F3D22"/>
-  <ellipse cx="66" cy="52" rx="2.5" ry="5.5" transform="rotate(15 66 52)" fill="#2F3D22"/>
-  
-  <!-- Large fig leaves kiwi color #8DBE3E -->
-  <path d="M26 76 C 18 68, 12 56, 16 42 C 20 36, 28 34, 34 40 C 40 46, 46 58, 46 70 C 46 76, 36 82, 26 76 Z" fill="#8DBE3E"/>
-  <path d="M74 76 C 82 68, 88 56, 84 42 C 80 36, 72 34, 66 40 C 60 46, 54 58, 54 70 C 54 76, 64 82, 74 76 Z" fill="#8DBE3E"/>
-  <path d="M30 70 Q 36 62, 42 48 M24 58 L28 56 M22 64 L26 62" stroke="white" stroke-width="0.7" fill="none" stroke-linecap="round" opacity="0.95"/>
-  <path d="M70 70 Q 64 62, 58 48 M76 58 L72 56 M78 64 L74 62" stroke="white" stroke-width="0.7" fill="none" stroke-linecap="round" opacity="0.95"/>
+  <!-- Large fig leaves kiwi #8DBE3E - SAME LEVEL as olive leaves -->
+  <g fill="#8DBE3E">
+    <path d="M16 58 C 12 52, 14 46, 20 42 C 24 40, 28 42, 30 46 C 32 50, 30 56, 26 60 C 22 64, 18 62, 16 58 Z M16 58 C 18 56, 22 52, 26 50 M18 52 L22 50"/>
+    <path d="M84 58 C 88 52, 86 46, 80 42 C 76 40, 72 42, 70 46 C 68 50, 70 56, 74 60 C 78 64, 82 62, 84 58 Z M84 58 C 82 56, 78 52, 74 50 M82 52 L78 50"/>
+  </g>
+  <path d="M16 58 C 14 54, 16 48, 20 44 M16 58 C 18 54, 22 50, 26 48" stroke="#C5E1A5" stroke-width="0.6" fill="none" stroke-linecap="round"/>
+  <path d="M84 58 C 86 54, 84 48, 80 44 M84 58 C 82 54, 78 50, 74 48" stroke="#C5E1A5" stroke-width="0.6" fill="none" stroke-linecap="round"/>
   
   <!-- Central olive dark #2F3D22 -->
-  <ellipse cx="50" cy="60" rx="8.5" ry="11" fill="#2F3D22"/>
-  <ellipse cx="53" cy="56" rx="2.5" ry="3.2" fill="white" opacity="0.9" transform="rotate(20 53 56)"/>
-  
-  <!-- Stem -->
-  <rect x="49" y="70" width="2" height="7" fill="#2F3D22"/>
+  <ellipse cx="50" cy="74" rx="7" ry="10" fill="#2F3D22"/>
+  <ellipse cx="52" cy="70" rx="2" ry="2.8" fill="white" opacity="0.85" transform="rotate(20 52 70)"/>
 </svg>
