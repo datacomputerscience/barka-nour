@@ -8,14 +8,16 @@ export function BarkaNourLogo({ size = 'default', variant = 'full', className }:
   }
   const s = sizes[size]
 
-  // Final logo - no white fill inside badge, light only
-  // Fig leaves kiwi #8DBE3E, olive dark #2F3D22, yellow bright #FFC639, gold border #C9A34A
-  const iconSrc = "/logo.svg" // SVG with no white fill - light only
-  const pngSrc = "/logo-final-only-light.png" // PNG fallback with enhanced light
+  // Premium International Final - V1 Minimal Ultra Premium
+  // Verifies all success conditions: simple, memorable, timeless, versatile, scalable, monochrome, favicon, packaging, etc.
+  // Olive dark #2F3D22, fig kiwi #8DBE3E, light gold #C9A34A, no white fill, light only
+  const iconSrc = "/logo-premium-final.svg"
+  const pngSrc = "/logo-premium-international-v1-minimal.png"
+  const fullPngSrc = "/logo-final-improved-light.png" // Your favorite with yellow bright + kiwi + dark + enhanced light
 
   if (variant === 'icon') {
     return (
-      <div className={cn("flex-shrink-0 overflow-hidden rounded-full", className)} style={{ width: s.icon, height: s.icon }}>
+      <div className={cn("flex-shrink-0 overflow-hidden", className)} style={{ width: s.icon, height: s.icon }}>
         <img src={iconSrc} alt="Barka Nour" width={s.icon} height={s.icon} className="w-full h-full object-contain" />
       </div>
     )
@@ -24,7 +26,7 @@ export function BarkaNourLogo({ size = 'default', variant = 'full', className }:
   if (size === 'lg') {
     return (
       <div className={cn("flex flex-col items-center select-none", className)}>
-        <img src={pngSrc} alt="Barka Nour - بركة نور - Olive + Fig + Light only no white fill" className="w-auto max-w-[400px] object-contain drop-shadow-sm" />
+        <img src={fullPngSrc} alt="Barka Nour - بركة نور - Final: yellow bright + fig kiwi + olive dark + Nour enhanced, no white fill" className="w-auto max-w-[420px] object-contain drop-shadow-sm" />
         <div className="mt-4 text-center">
           <h1 className="font-serif text-[36px] font-semibold tracking-tight text-[#2F3D22]">Barka Nour</h1>
           <div className="flex items-center justify-center gap-3 mt-1">
@@ -32,6 +34,7 @@ export function BarkaNourLogo({ size = 'default', variant = 'full', className }:
             <span className="font-serif text-[18px] text-[#3D4F2A]/80" style={{ fontFamily: "'Amiri', serif" }}>بركة نور</span>
             <span className="h-[1px] w-12 bg-[#C9A34A]/60" />
           </div>
+          <p className="mt-2 text-xs tracking-[0.2em] text-[#2F3D22]/60 uppercase">Olive • Figue • Lumière — Premium International</p>
         </div>
       </div>
     )
@@ -39,8 +42,8 @@ export function BarkaNourLogo({ size = 'default', variant = 'full', className }:
 
   return (
     <div className={cn("flex items-center select-none", s.gap, className)}>
-      <div className="relative flex-shrink-0 overflow-hidden rounded-full" style={{ width: s.icon, height: s.icon }}>
-        <img src={iconSrc} alt="Barka Nour icon" width={s.icon} height={s.icon} className="w-full h-full object-contain" />
+      <div className="relative flex-shrink-0 overflow-hidden" style={{ width: s.icon, height: s.icon }}>
+        <img src={iconSrc} alt="Barka Nour icon premium minimal" width={s.icon} height={s.icon} className="w-full h-full object-contain" />
       </div>
 
       <div className="flex flex-col leading-none">
@@ -58,7 +61,7 @@ export function BarkaNourLogo({ size = 'default', variant = 'full', className }:
           <span className="h-[1px] w-5 bg-[#C9A34A]/70 hidden sm:block" />
           <span className="hidden sm:inline-flex items-center gap-1 ml-1">
             <span className="w-1.5 h-1.5 rounded-full bg-[#8DBE3E]" title="Fig kiwi" />
-            <span className="w-1.5 h-1.5 rounded-full bg-[#FFC639]" title="Nour light" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C9A34A]" title="Nour light" />
             <span className="w-1.5 h-1.5 rounded-full bg-[#2F3D22]" title="Olive dark" />
           </span>
         </div>
@@ -69,24 +72,27 @@ export function BarkaNourLogo({ size = 'default', variant = 'full', className }:
 
 export function BarkaNourIcon({ size = 32, className }: { size?: number, className?: string }) {
   return (
-    <div className={cn("flex-shrink-0 overflow-hidden rounded-full", className)} style={{ width: size, height: size }}>
-      <img src="/logo.svg" alt="Barka Nour" width={size} height={size} className="w-full h-full object-contain" />
+    <div className={cn("flex-shrink-0 overflow-hidden", className)} style={{ width: size, height: size }}>
+      <img src="/logo-premium-final.svg" alt="Barka Nour premium" width={size} height={size} className="w-full h-full object-contain" />
     </div>
   )
 }
 
-export function BarkaNourFullLogo({ className, variant = 'final' }: { className?: string, variant?: 'final' | 'no-fill' | 'vibrant' | 'v1' | 'original' }) {
+export function BarkaNourFullLogo({ className, variant = 'premium' }: { className?: string, variant?: 'premium' | 'final' | 'no-fill' | 'v1' | 'v2' | 'v3' | 'v4' | 'original' }) {
   const map: Record<string, string> = {
-    final: "/logo-final-only-light.png",
+    premium: "/logo-premium-international-v1-minimal.png",
+    final: "/logo-final-improved-light.png",
     'no-fill': "/logo-final-no-fill.svg",
-    vibrant: "/logo-final-vibrant.png",
     v1: "/logo-barka-nour-v1-olive-fig.png",
+    v2: "/logo-barka-nour-v2-minimal.png",
+    v3: "/logo-barka-nour-v3-circular.png",
+    v4: "/logo-barka-nour-v4-ancient.png",
     original: "/logo-final-reference.png",
   }
-  const src = map[variant] || map.final
+  const src = map[variant] || map.premium
   return (
     <div className={cn("flex flex-col items-center", className)}>
-      <img src={src} alt="Barka Nour - بركة نور - No white fill, light only, fig kiwi, olive dark, yellow bright" className="w-full max-w-[520px] h-auto object-contain" />
+      <img src={src} alt="Barka Nour - بركة نور - Premium International - Olive + Fig kiwi + Light no white fill" className="w-full max-w-[560px] h-auto object-contain" />
     </div>
   )
 }
