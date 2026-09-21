@@ -4,16 +4,16 @@ export function BarkaNourLogo({ size = 'default', variant = 'full', className }:
   const sizes = {
     sm: { icon: 44, text: 'text-[21px]', sub: 'text-[11px]', gap: 'gap-2.5' },
     default: { icon: 56, text: 'text-[28px]', sub: 'text-[13px]', gap: 'gap-3' },
-    lg: { icon: 88, text: 'text-[40px]', sub: 'text-[16px]', gap: 'gap-4' },
+    lg: { icon: 96, text: 'text-[42px]', sub: 'text-[16px]', gap: 'gap-4' },
   }
   const s = sizes[size]
 
-  const iconSrc = "/logo-icon-v1.png"
-  const fullSrc = "/logo-barka-nour-v1-olive-fig.png"
+  const iconSrc = "/logo-icon-final.png"
+  const fullSrc = "/logo-final-improved-light.png"
 
   if (variant === 'icon') {
     return (
-      <div className={cn("flex-shrink-0 overflow-hidden rounded-full shadow-sm ring-1 ring-[#C9A34A]/20", className)} style={{ width: s.icon, height: s.icon }}>
+      <div className={cn("flex-shrink-0 overflow-hidden rounded-full shadow-sm ring-1 ring-[#C9A34A]/30", className)} style={{ width: s.icon, height: s.icon }}>
         <img src={iconSrc} alt="Barka Nour" width={s.icon} height={s.icon} className="w-full h-full object-cover" />
       </div>
     )
@@ -22,14 +22,22 @@ export function BarkaNourLogo({ size = 'default', variant = 'full', className }:
   if (size === 'lg') {
     return (
       <div className={cn("flex flex-col items-center select-none", className)}>
-        <img src={fullSrc} alt="Barka Nour - بركة نور - Olive + Fig + Light" className="w-auto max-w-[380px] object-contain" />
+        <img src={fullSrc} alt="Barka Nour - بركة نور - Olive + Fig + Light Nour" className="w-auto max-w-[400px] object-contain drop-shadow-sm" />
+        <div className="mt-4 text-center">
+          <h1 className="font-serif text-[36px] font-semibold tracking-tight text-[#2F3D22]">Barka Nour</h1>
+          <div className="flex items-center justify-center gap-3 mt-1">
+            <span className="h-[1px] w-12 bg-[#C9A34A]/60" />
+            <span className="font-serif text-[18px] text-[#3D4F2A]/80" style={{ fontFamily: "'Amiri', serif" }}>بركة نور</span>
+            <span className="h-[1px] w-12 bg-[#C9A34A]/60" />
+          </div>
+        </div>
       </div>
     )
   }
 
   return (
     <div className={cn("flex items-center select-none", s.gap, className)}>
-      <div className="relative flex-shrink-0 overflow-hidden rounded-full shadow-sm ring-1 ring-[#C9A34A]/20" style={{ width: s.icon, height: s.icon }}>
+      <div className="relative flex-shrink-0 overflow-hidden rounded-full shadow-sm ring-1 ring-[#C9A34A]/30" style={{ width: s.icon, height: s.icon }}>
         <img src={iconSrc} alt="Barka Nour icon" width={s.icon} height={s.icon} className="w-full h-full object-cover" />
       </div>
 
@@ -47,8 +55,9 @@ export function BarkaNourLogo({ size = 'default', variant = 'full', className }:
           </span>
           <span className="h-[1px] w-5 bg-[#C9A34A]/70 hidden sm:block" />
           <span className="hidden sm:inline-flex items-center gap-1 ml-1">
-            <span className="w-1 h-1 rounded-full bg-[#684552]/60" title="Fig accent" />
-            <span className="w-1 h-1 rounded-full bg-[#C9A34A]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#8DBE3E]" title="Fig kiwi" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C9A34A]" title="Nour light" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#2F3D22]" title="Olive dark" />
           </span>
         </div>
       </div>
@@ -58,24 +67,26 @@ export function BarkaNourLogo({ size = 'default', variant = 'full', className }:
 
 export function BarkaNourIcon({ size = 32, className }: { size?: number, className?: string }) {
   return (
-    <div className={cn("flex-shrink-0 overflow-hidden rounded-full shadow-sm ring-1 ring-[#C9A34A]/20", className)} style={{ width: size, height: size }}>
-      <img src="/logo-icon-v1.png" alt="Barka Nour" width={size} height={size} className="w-full h-full object-cover" />
+    <div className={cn("flex-shrink-0 overflow-hidden rounded-full shadow-sm ring-1 ring-[#C9A34A]/30", className)} style={{ width: size, height: size }}>
+      <img src="/logo-icon-final.png" alt="Barka Nour" width={size} height={size} className="w-full h-full object-cover" />
     </div>
   )
 }
 
-export function BarkaNourFullLogo({ className, variant = 'v1' }: { className?: string, variant?: 'v1' | 'v2' | 'v3' | 'v4' | 'original' }) {
+export function BarkaNourFullLogo({ className, variant = 'final' }: { className?: string, variant?: 'final' | 'vibrant' | 'v1' | 'v2' | 'v3' | 'v4' | 'original' }) {
   const map: Record<string, string> = {
+    final: "/logo-final-improved-light.png",
+    vibrant: "/logo-final-vibrant.png",
     v1: "/logo-barka-nour-v1-olive-fig.png",
     v2: "/logo-barka-nour-v2-minimal.png",
     v3: "/logo-barka-nour-v3-circular.png",
     v4: "/logo-barka-nour-v4-ancient.png",
-    original: "/logo-official.png",
+    original: "/logo-final-reference.png",
   }
-  const src = map[variant] || map.v1
+  const src = map[variant] || map.final
   return (
     <div className={cn("flex flex-col items-center", className)}>
-      <img src={src} alt="Barka Nour - بركة نور - Olive tree + Light + Fig" className="w-full max-w-[480px] h-auto object-contain" />
+      <img src={src} alt="Barka Nour - بركة نور - Olive + Fig kiwi + Light Nour enhanced" className="w-full max-w-[520px] h-auto object-contain" />
     </div>
   )
 }
