@@ -73,7 +73,7 @@ export function BarkaNourLogo({ size = 'default', variant = 'full', className }:
 export function BarkaNourIcon({ size = 32, className }: { size?: number, className?: string }) {
   return (
     <div className={cn("flex-shrink-0 overflow-hidden", className)} style={{ width: size, height: size }}>
-      <img src="/logo-premium-final.svg" alt="Barka Nour premium" width={size} height={size} className="w-full h-full object-contain" />
+      <img src="/logo-barka-nour-icon.png" alt="Barka Nour" width={size} height={size} className="w-full h-full object-contain" />
     </div>
   )
 }
