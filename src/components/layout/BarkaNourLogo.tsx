@@ -36,17 +36,20 @@ export function BarkaNourLogo({ size = 'default', variant = 'full', className }:
         <img src={iconSrc} alt="Barka Nour icon premium minimal" width={s.icon} height={s.icon} className="w-full h-full object-contain" />
       </div>
 
-      <div className="flex flex-col leading-none">
+      <div className="flex flex-col leading-tight">
         <span
-          className={cn("tracking-tight text-[#2F3D22] dark:text-[#F7F2E6] font-serif", s.text)}
-          style={{ fontFamily: "'Cormorant Garamond', 'Playfair Display', serif", fontWeight: 600, letterSpacing: '-0.02em' }}
+          className={cn("tracking-tight text-[#2F3D22] dark:text-[#F7F2E6]", s.text)}
+          style={{ fontFamily: "'Amiri', serif", fontWeight: 700 }}
         >
-          Barka Nour
+          بركة نور
         </span>
-        <div className="flex items-center gap-2 -mt-1">
+        <div className="flex items-center gap-2 -mt-0.5">
           <span className="h-[1px] w-5 bg-[#C9A34A]/70 hidden sm:block" />
-          <span className={cn("font-medium tracking-wide text-[#3D4F2A]/80 dark:text-[#F7F2E6]/70", s.sub)} style={{ fontFamily: "'Amiri', serif" }}>
-            بركة نور
+          <span
+            className={cn("font-medium tracking-wide text-[#3D4F2A]/80 dark:text-[#F7F2E6]/70", s.sub)}
+            style={{ fontFamily: "'Cormorant Garamond', 'Playfair Display', serif", fontWeight: 600 }}
+          >
+            Barka Nour
           </span>
           <span className="h-[1px] w-5 bg-[#C9A34A]/70 hidden sm:block" />
           <span className="hidden sm:inline-flex items-center gap-1 ml-1">
