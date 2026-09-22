@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380">
+  <title>Barka Nour — Logo simple</title>
+  <desc>Wordmark minimaliste : olive émeraude, Barka vert profond, Nour or, artisanat tunisien</desc>
+
+  <!-- ===== Emblème olive minimal ===== -->
+  <g transform="translate(400,118)">
+    <!-- rayons de lumière (Nour) -->
+    <g stroke="#C9A34A" stroke-width="6" stroke-linecap="round">
+      <line x1="0" y1="-88" x2="0" y2="-64"/>
+      <line x1="-52" y1="-72" x2="-38" y2="-52"/>
+      <line x1="52" y1="-72" x2="38" y2="-52"/>
+      <line x1="-84" y1="-36" x2="-62" y2="-26"/>
+      <line x1="84" y1="-36" x2="62" y2="-26"/>
+    </g>
+    <!-- tige -->
+    <line x1="0" y1="-30" x2="0" y2="-46" stroke="#2F3D22" stroke-width="6" stroke-linecap="round"/>
+    <!-- feuille -->
+    <path d="M2,-44 C20,-48 34,-60 38,-80 C18,-76 4,-64 2,-44 Z" fill="#2F3D22"/>
+    <!-- olive -->
+    <ellipse cx="0" cy="6" rx="27" ry="36" fill="#2F3D22"/>
+    <ellipse cx="-9" cy="-4" rx="7" ry="13" fill="#ffffff" opacity="0.28"/>
+  </g>
+
+  <!-- ===== Wordmark bicolore (ancrage end/start = centrage parfait partout) ===== -->
+  <text x="392" y="252" text-anchor="end" font-family="Georgia, 'Times New Roman', serif" font-size="76" font-weight="600" fill="#0B3D2E">Barka</text>
+  <text x="408" y="252" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="76" font-weight="600" fill="#C9A34A">Nour</text>
+
+  <!-- ===== Séparateur or ===== -->
+  <line x1="225" y1="288" x2="385" y2="288" stroke="#C9A34A" stroke-width="2"/>
+  <line x1="415" y1="288" x2="575" y2="288" stroke="#C9A34A" stroke-width="2"/>
+  <circle cx="400" cy="288" r="5" fill="#C9A34A"/>
+
+  <!-- ===== Slogan ===== -->
+  <text x="400" y="326" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="21" letter-spacing="7" fill="#0B3D2E">ARTISANAT TUNISIEN</text>
+</svg>

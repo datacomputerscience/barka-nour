@@ -8,12 +8,11 @@ export function BarkaNourLogo({ size = 'default', variant = 'full', className }:
   }
   const s = sizes[size]
 
-  // Premium International Final - V1 Minimal Ultra Premium
-  // Verifies all success conditions: simple, memorable, timeless, versatile, scalable, monochrome, favicon, packaging, etc.
-  // Olive dark #2F3D22, fig kiwi #8DBE3E, light gold #C9A34A, no white fill, light only
-  const iconSrc = "/logo-premium-final.svg"
+  // Logo officiel validé: olive + feuille dorée + rayons (fond blanc épuré)
+  // Fichiers: /logo-barka-nour-icon.png (header/favicon) + /barka-nour-logo-simple.svg (version complète)
+  const iconSrc = "/logo-barka-nour-icon.png"
   const pngSrc = "/logo-premium-international-v1-minimal.png"
-  const fullPngSrc = "/logo-final-improved-light.png" // Your favorite with yellow bright + kiwi + dark + enhanced light
+  const fullPngSrc = "/barka-nour-logo-simple.svg" // Logo simple officiel: olive + Barka Nour + Artisanat Tunisien
 
   if (variant === 'icon') {
     return (
@@ -26,16 +25,7 @@ export function BarkaNourLogo({ size = 'default', variant = 'full', className }:
   if (size === 'lg') {
     return (
       <div className={cn("flex flex-col items-center select-none", className)}>
-        <img src={fullPngSrc} alt="Barka Nour - بركة نور - Final: yellow bright + fig kiwi + olive dark + Nour enhanced, no white fill" className="w-auto max-w-[420px] object-contain drop-shadow-sm" />
-        <div className="mt-4 text-center">
-          <h1 className="font-serif text-[36px] font-semibold tracking-tight text-[#2F3D22]">Barka Nour</h1>
-          <div className="flex items-center justify-center gap-3 mt-1">
-            <span className="h-[1px] w-12 bg-[#C9A34A]/60" />
-            <span className="font-serif text-[18px] text-[#3D4F2A]/80" style={{ fontFamily: "'Amiri', serif" }}>بركة نور</span>
-            <span className="h-[1px] w-12 bg-[#C9A34A]/60" />
-          </div>
-          <p className="mt-2 text-xs tracking-[0.2em] text-[#2F3D22]/60 uppercase">Olive • Figue • Lumière — Premium International</p>
-        </div>
+        <img src={fullPngSrc} alt="Barka Nour - Artisanat Tunisien" className="w-full max-w-[320px] h-auto object-contain" />
       </div>
     )
   }
@@ -78,10 +68,11 @@ export function BarkaNourIcon({ size = 32, className }: { size?: number, classNa
   )
 }
 
-export function BarkaNourFullLogo({ className, variant = 'premium' }: { className?: string, variant?: 'premium' | 'final' | 'no-fill' | 'v1' | 'v2' | 'v3' | 'v4' | 'original' }) {
+export function BarkaNourFullLogo({ className, variant = 'simple' }: { className?: string, variant?: 'simple' | 'premium' | 'final' | 'no-fill' | 'v1' | 'v2' | 'v3' | 'v4' | 'original' }) {
   const map: Record<string, string> = {
+    simple: "/barka-nour-logo-simple.svg",
     premium: "/logo-premium-international-v1-minimal.png",
-    final: "/logo-final-improved-light.png",
+    final: "/logo-barka-nour-final.png",
     'no-fill': "/logo-final-no-fill.svg",
     v1: "/logo-barka-nour-v1-olive-fig.png",
     v2: "/logo-barka-nour-v2-minimal.png",
@@ -89,10 +80,10 @@ export function BarkaNourFullLogo({ className, variant = 'premium' }: { classNam
     v4: "/logo-barka-nour-v4-ancient.png",
     original: "/logo-final-reference.png",
   }
-  const src = map[variant] || map.premium
+  const src = map[variant] || map.simple
   return (
     <div className={cn("flex flex-col items-center", className)}>
-      <img src={src} alt="Barka Nour - بركة نور - Premium International - Olive + Fig kiwi + Light no white fill" className="w-full max-w-[560px] h-auto object-contain" />
+      <img src={src} alt="Barka Nour - Artisanat Tunisien" className="w-full max-w-[560px] h-auto object-contain" />
     </div>
   )
 }

@@ -103,7 +103,7 @@ export function StorefrontLayout({ children, cartCount, lang, setLang, onLangCha
         <div className="mx-auto max-w-[1280px] px-4 lg:px-6 py-12">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <BarkaNourLogo size="sm" />
+              <BarkaNourLogo size="lg" className="items-start [&>img]:max-w-[220px]" />
               <p className="mt-4 text-sm text-ink-600 leading-relaxed">
                 {lang === 'ar' ? 'متجر بركة نور - منتجات تونسية أصيلة، حرفة وتقاليد. جودة، ثقة وتوصيل في جميع أنحاء تونس.' :
                  lang === 'en' ? 'Barka Nour store - authentic Tunisian products, craft and tradition. Quality, trust and delivery across Tunisia.' :
