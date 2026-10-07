@@ -8,6 +8,43 @@ import { slugify, generateSKU } from '@/lib/utils'
 // Mock data for demo (single-store, no tenant_id)
 const mockProducts: Product[] = [
   {
+    id: '6',
+    name: 'Graines de Moringa en Vrac - Récolte des champs - 100 g',
+    slug: 'graines-moringa-vrac',
+    short_description: 'Vrac • Récolte des champs • 100 g',
+    description: `🌾 Récolté aux champs, préparé avec soin
+Nos graines de moringa sont récoltées dans nos champs en Tunisie, séchées naturellement au soleil, puis triées une à une. Pas d'usine, pas d'intermédiaires : du champ directement à votre porte.
+
+⚖️ Vendu en vrac, au juste poids
+Des graines en vrac, sans emballage superflu : vous payez le produit, pas le marketing. Conditionnées simplement en paquet kraft pour une livraison soignée. Poids : 100 g.
+
+🤝 Un petit producteur, pas une entreprise
+Nous sommes une petite production familiale tunisienne. Chaque commande est préparée par nos soins, avec le souci du travail bien fait. En choisissant nos graines, vous soutenez directement un producteur local.
+
+🚚 Livraison partout en Tunisie
+Expédition soignée en 24-72h vers les 24 gouvernorats. Paiement à la livraison : vous payez en espèces à la réception de votre colis.
+
+✅ Graines entières triées à la main
+✅ Séchage naturel au soleil
+✅ Vrac — 100 g au juste prix : 2,500 DT
+✅ Récolte tunisienne, circuit court`,
+    sku: 'BN-MORINGA-006',
+    price: 2.500,
+    compare_at_price: null,
+    sale_price: null,
+    cost_price: 1.000,
+    stock_quantity: 100,
+    low_stock_threshold: 10,
+    status: 'active',
+    featured: true,
+    is_new: true,
+    images: ['/products/moringa-vrac-hero.jpg', '/products/moringa-graines-macro.jpg', '/products/moringa-sac-vrac.jpg', '/products/moringa-champ.jpg'],
+    seo_title: 'Graines de Moringa en Vrac - Barka Nour',
+    seo_description: 'Graines moringa en vrac 100g à 2.500 DT, récolte des champs, livraison partout en Tunisie.',
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  },
+  {
     id: '1',
     name: 'Tapis Berbère - Laine naturelle - 120x180 - Écru',
     slug: 'tapis-berbere-laine-ecru',

@@ -44,7 +44,12 @@ INSERT INTO products (name, slug, sku, short_description, description, price, co
 ('Support Smartphone Bambou - Bureau', 'support-smartphone-bambou-bureau', 'BN-SUPPORT-001',
  'Support téléphone bambou naturel, angle réglable',
  'Support smartphone et tablette bambou naturel verni, angle 30°, rainure câble, 12x8cm. Stable, élégant et pratique pour bureau.',
- 29.900, 39.900, 33, 10, 'active', true, '["support-bambou.jpg"]'::jsonb)
+ 29.900, 39.900, 33, 10, 'active', true, '["support-bambou.jpg"]'::jsonb),
+
+('Graines de Moringa en Vrac - 100g', 'graines-moringa-vrac', 'BN-MORINGA-006',
+ 'Graines de moringa en vrac, recolte des champs, 100g',
+ 'Graines de moringa en vrac, recolte des champs en Tunisie, sechees au soleil et triees a la main. 100g au juste poids. Petit producteur familial, circuit court. Photo objet uniquement, sans personnes.',
+ 2.500, NULL, 100, 10, 'active', true, '["/products/moringa-vrac-hero.jpg", "/products/moringa-graines-macro.jpg", "/products/moringa-sac-vrac.jpg", "/products/moringa-champ.jpg"]'::jsonb)
 ON CONFLICT (slug) DO NOTHING;
 
 -- Coupons

@@ -168,10 +168,15 @@ export function HomePage({ lang, onAddToCart }: Props) {
           {featured.map(product => (
             <Card key={product.id} className="group overflow-hidden border-ink-200 bg-white hover:shadow-lg transition-all">
               <Link to={`/products/${product.slug}`}>
-                <div className="aspect-[4/3] bg-[#fdfcf8] relative">
-                  <div className="absolute inset-0 flex items-center justify-center"><Package className="h-10 w-10 text-olive-200 group-hover:scale-110 transition-transform" /></div>
+                <div className="aspect-[4/3] bg-[#fdfcf8] relative overflow-hidden">
+                  {product.images?.[0] ? (
+                    <img src={product.images[0]} alt={product.name} loading="lazy" className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform" />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center"><Package className="h-10 w-10 text-olive-200 group-hover:scale-110 transition-transform" /></div>
+                  )}
                   {product.compare_at_price && <Badge className="absolute top-2.5 left-2.5 bg-olive-700 text-white text-[11px]">-{Math.round((1-product.price/product.compare_at_price)*100)}%</Badge>}
                   <Badge className="absolute top-2.5 right-2.5 bg-bn-400 text-ink-800 border-bn-300 text-[10px]"><Star className="h-3 w-3" /> 4.9</Badge>
+                  {product.is_new && <Badge className="absolute bottom-2.5 left-2.5 bg-emerald-600 text-white text-[10px]">✨ Nouveau</Badge>}
                 </div>
               </Link>
               <CardContent className="p-3.5">

@@ -21,6 +21,7 @@ export interface Product {
   low_stock_threshold: number
   status: ProductStatus
   featured: boolean
+  is_new?: boolean
   images: string[]
   seo_title: string | null
   seo_description: string | null

@@ -132,7 +132,7 @@ export function CheckoutPage({ lang, items, onOrderPlaced }: Props) {
               <div className="space-y-3 max-h-[240px] overflow-auto pr-1">
                 {items.map(i => (
                   <div key={i.id} className="flex gap-3 text-sm">
-                    <div className="h-12 w-12 rounded-lg bg-[#fdfcf8] border flex items-center justify-center flex-shrink-0"><Package className="h-5 w-5 text-olive-300" /></div>
+                    <div className="h-12 w-12 rounded-lg bg-[#fdfcf8] border flex items-center justify-center flex-shrink-0 overflow-hidden relative">{i.image ? (<img src={i.image} alt={i.name} className="absolute inset-0 h-full w-full object-cover" />) : (<Package className="h-5 w-5 text-olive-300" />)}</div>
                     <div className="flex-1 min-w-0"><p className="font-medium leading-tight line-clamp-1">{i.name}</p><p className="text-xs text-ink-500">x{i.quantity} • {formatTND(i.price)}</p></div>
                     <span className="font-bold text-sm">{formatTND(i.price * i.quantity)}</span>
                   </div>

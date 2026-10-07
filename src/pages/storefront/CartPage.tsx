@@ -16,6 +16,7 @@ export interface CartItem {
   quantity: number
   stock: number
   variant?: string
+  image?: string
 }
 
 interface Props {
@@ -52,7 +53,7 @@ export function CartPage({ lang, items, onUpdateQty, onRemove }: Props) {
           {items.map(item => (
             <Card key={item.id} className="overflow-hidden">
               <CardContent className="p-4 flex gap-4">
-                <div className="h-[88px] w-[88px] rounded-xl bg-[#fdfcf8] border flex items-center justify-center flex-shrink-0"><Package className="h-8 w-8 text-olive-300" /></div>
+                <div className="h-[88px] w-[88px] rounded-xl bg-[#fdfcf8] border flex items-center justify-center flex-shrink-0 overflow-hidden relative">{item.image ? (<img src={item.image} alt={item.name} className="absolute inset-0 h-full w-full object-cover" />) : (<Package className="h-8 w-8 text-olive-300" />)}</div>
                 <div className="flex-1 min-w-0">
                   <p className="text-[11px] font-mono text-ink-500">{item.sku} {item.variant && `• ${item.variant}`}</p>
                   <Link to={`/products/${item.slug}`} className="font-medium text-sm leading-tight line-clamp-2 hover:text-bn-700">{item.name}</Link>

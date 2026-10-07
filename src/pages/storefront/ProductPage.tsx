@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -20,6 +20,8 @@ export function ProductPage({ lang, onAddToCart }: Props) {
   const product = mockProducts.find(p => p.slug === slug) || mockProducts[0]
   const [qty, setQty] = useState(1)
   const [selectedVariant, setSelectedVariant] = useState<string | null>(null)
+  const [selectedImg, setSelectedImg] = useState(0)
+  useEffect(() => { setSelectedImg(0) }, [slug])
 
   const handleAddToCart = () => {
     const eventId = generateEventId()
@@ -36,13 +38,19 @@ export function ProductPage({ lang, onAddToCart }: Props) {
       <div className="grid lg:grid-cols-2 gap-10">
         <div className="space-y-4">
           <div className="aspect-[4/3] rounded-[1.5rem] bg-[#fdfcf8] border border-olive-100 flex items-center justify-center relative overflow-hidden">
-            <Package className="h-20 w-20 text-olive-200" />
+            {product.images?.[0] ? (
+              <img src={product.images[selectedImg] ?? product.images[0]} alt={product.name} className="absolute inset-0 h-full w-full object-cover" />
+            ) : (
+              <Package className="h-20 w-20 text-olive-200" />
+            )}
             {product.compare_at_price && <Badge className="absolute top-4 left-4 bg-olive-700 text-white">-{Math.round((1-product.price/product.compare_at_price)*100)}% • {formatTND(product.compare_at_price - product.price)} économisés</Badge>}
             <Badge className="absolute top-4 right-4 bg-white border text-ink-700"><Star className="h-3 w-3 fill-amber-400 text-amber-400" /> 4.8 (24 avis)</Badge>
           </div>
           <div className="grid grid-cols-4 gap-3">
-            {[1,2,3,4].map(i => (
-              <div key={i} className="aspect-square rounded-xl bg-[#fdfcf8] border flex items-center justify-center hover:border-bn-300 cursor-pointer"><Package className="h-6 w-6 text-olive-300" /></div>
+            {(product.images?.length ? product.images : [null, null, null, null]).slice(0, 4).map((img, i) => (
+              <div key={i} onClick={() => img && setSelectedImg(i)} className={`aspect-square rounded-xl bg-[#fdfcf8] border flex items-center justify-center overflow-hidden relative cursor-pointer ${img && selectedImg === i ? 'border-bn-500 ring-2 ring-bn-300' : 'hover:border-bn-300'}`}>
+                {img ? (<img src={img} alt={`${product.name} - photo ${i + 1}`} className="absolute inset-0 h-full w-full object-cover" />) : (<Package className="h-6 w-6 text-olive-300" />)}
+              </div>
             ))}
           </div>
           <div className="rounded-xl bg-blue-50 border border-blue-200 p-3 text-xs text-blue-800">
@@ -99,7 +107,7 @@ export function ProductPage({ lang, onAddToCart }: Props) {
 
             <div className="space-y-3 pt-4 border-t">
               <h3 className="font-semibold">Description</h3>
-              <p className="text-sm text-ink-600 leading-relaxed">{product.description}</p>
+              <p className="text-sm text-ink-600 leading-relaxed whitespace-pre-line">{product.description}</p>
               <div className="rounded-xl bg-ink-50 border p-4 text-sm space-y-2">
                 <p className="font-medium">Détails:</p>
                 <div className="grid grid-cols-2 gap-2 text-xs">
@@ -119,7 +127,7 @@ export function ProductPage({ lang, onAddToCart }: Props) {
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
           {related.map(p => (
             <Card key={p.id} className="overflow-hidden hover:shadow-md transition-shadow">
-              <Link to={`/products/${p.slug}`}><div className="aspect-[4/3] bg-[#fdfcf8] flex items-center justify-center"><Package className="h-8 w-8 text-olive-300" /></div></Link>
+              <Link to={`/products/${p.slug}`}><div className="aspect-[4/3] bg-[#fdfcf8] flex items-center justify-center overflow-hidden relative">{p.images?.[0] ? (<img src={p.images[0]} alt={p.name} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />) : (<Package className="h-8 w-8 text-olive-300" />)}</div></Link>
               <CardContent className="p-3">
                 <p className="text-xs font-mono text-ink-500">{p.sku}</p>
                 <p className="text-sm font-medium line-clamp-2 leading-tight">{p.name}</p>

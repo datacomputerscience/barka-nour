@@ -44,6 +44,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         quantity: qty,
         stock: product.stock_quantity,
         variant,
+        image: product.images?.[0],
       }]
     })
   }
